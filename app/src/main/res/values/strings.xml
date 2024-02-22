@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Dansek</string>
+    <string name="app_description">Welcome to the night of your dreams</string>
+    <string name="no_account_yet">Not an account yet?</string>
+</resources>
