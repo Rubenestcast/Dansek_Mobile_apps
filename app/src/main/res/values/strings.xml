@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Dansek</string>
     <string name="app_description">Welcome to the night of your dreams</string>
+    <string name="logIn_intro">Welcome to Dansek, welcome to your best nights!</string>
     <string name="no_account_yet">Not an account yet?</string>
     <string name="login_main_button">Log In</string>
+
+    <string name="hint_Email_LogIn">Email</string>
+    <string name="hint_Password_LogIn">Password</string>
 </resources>

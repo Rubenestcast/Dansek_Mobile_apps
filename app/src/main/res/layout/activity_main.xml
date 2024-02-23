@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
-        android:layout_height="36dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_extrabold"
         android:shadowColor="#80000000"
         android:shadowDx="2"

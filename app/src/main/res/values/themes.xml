@@ -4,7 +4,6 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="colorPrimary">@color/purple_500</item>
-        <dimen name= "abc_dialog_corner_radius_material" >2dp</dimen>
 
     </style>
 

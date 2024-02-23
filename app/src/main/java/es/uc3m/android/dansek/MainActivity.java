@@ -2,13 +2,16 @@ package es.uc3m.android.dansek;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button login_button;
+
 
 
     @Override
@@ -16,8 +19,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-        Log.d("MainActivity", "First debug message");
+        View login_button = findViewById(R.id.loginButton);
+        login_button.setOnClickListener(view -> {
+            Intent intent = new Intent(getBaseContext(), Login.class);
+            startActivity(intent);
+        });
     }
 }
