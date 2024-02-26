@@ -4,7 +4,8 @@
     <string name="logIn_intro">Welcome to Dansek, welcome to your best nights!</string>
     <string name="no_account_yet">Not an account yet?</string>
     <string name="login_main_button">Log In</string>
-
+    <string name="signUp_main_button">SignUp</string>
     <string name="hint_Email_LogIn">Email</string>
     <string name="hint_Password_LogIn">Password</string>
+    <string name="title_activity_sign_up">SignUp</string>
 </resources>

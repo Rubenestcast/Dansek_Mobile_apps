@@ -1,11 +1,11 @@
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/transparent"
-    tools:context=".Login">
+    tools:context=".SignUp">
+
 
     <!-- Imagen de fondo -->
     <ImageView
@@ -43,6 +43,8 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <!-- Texto "Welcome to Dansek, welcome to your best nights!" -->
+
+
             <TextView
                 android:id="@+id/welcome_text"
                 android:layout_width="256dp"
@@ -59,6 +61,8 @@
                 app:layout_constraintVertical_bias="0.076" />
 
             <!-- Recuadro grande -->
+
+
             <FrameLayout
                 android:id="@+id/frameLayout"
                 android:layout_width="200dp"
@@ -75,12 +79,16 @@
                     android:id="@+id/smallRectangle"
                     android:layout_width="110dp"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="90dp"
                     android:background="@drawable/switch_rectangle_selected"
                     android:fontFamily="@font/nunito_black"
                     android:gravity="center"
-                    android:text="@string/login_main_button"
+                    android:text="@string/signUp_main_button"
                     android:textAlignment="center"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
 
             </FrameLayout>
 
@@ -116,6 +124,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/email_edit_text"
                 app:layout_constraintVertical_bias="0.0" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
