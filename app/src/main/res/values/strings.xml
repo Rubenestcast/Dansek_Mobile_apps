@@ -9,4 +9,5 @@
     <string name="hint_Password_LogIn">Password</string>
     <string name="hint_repeat_Password_SignUp">Repeat password</string>
     <string name="title_activity_sign_up">SignUp</string>
+    <string name="Search_bar">Search...</string>
 </resources>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Radio de los bordes redondeados para el smallRectangle -->
-    <dimen name="small_rectangle_corner_radius">25dp</dimen>
+        <dimen name="general_corner_25dp">25dp</dimen>
 
-    <dimen name="frame_layout_corner_radius">25dp</dimen>
+    <dimen name="general_corner_20dp">20dp</dimen>
 </resources>

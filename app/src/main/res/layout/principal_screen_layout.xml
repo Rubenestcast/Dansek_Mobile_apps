@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Imagen de fondo -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo_de_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Vista para aplicar el filtro de color -->
+    <View
+        android:id="@+id/color_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#050040"
+        android:alpha="0.58"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="202dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:adjustViewBounds="true"
+        android:elevation="10dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.00" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/principalRectangle"
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:background="@drawable/rectangle_light_bg_25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.87">
+
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:background="@drawable/rectangle_light_turquesa_20dp"
+            android:drawableStart="@drawable/search_lupa"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:hint="@string/Search_bar"
+            android:textColorHint="@android:color/white"
+            android:textSize="20sp"
+            android:paddingStart="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.057"
+            tools:ignore="RtlSymmetry" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

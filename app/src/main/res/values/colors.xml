@@ -4,5 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="colorSelected">#024352</color>
-    <color name="colorUnselected">#DBFDFF</color>
+    <color name="colorGeneric">#DBFDFF</color>
+    <color name="BackgroundBasicColor">#0390A8</color>
+    <color name="LightBlue">#00B4FF</color>
 </resources>

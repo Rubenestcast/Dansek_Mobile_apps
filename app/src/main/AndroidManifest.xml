@@ -13,16 +13,18 @@
         android:theme="@style/Theme.Dansek"
         tools:targetApi="31">
         <activity
+            android:name=".PrincipalScreen"
+            android:exported="false" />
+        <activity
             android:name=".SignUp"
             android:exported="false"
             android:label="@string/title_activity_sign_up"
             android:theme="@style/Theme.Dansek"
-            android:windowLayoutInDisplayCutoutMode="shortEdges"
-            />
+            android:windowLayoutInDisplayCutoutMode="shortEdges" />
         <activity
             android:name=".Login"
             android:exported="false"
-            android:windowLayoutInDisplayCutoutMode="shortEdges"/>
+            android:windowLayoutInDisplayCutoutMode="shortEdges" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

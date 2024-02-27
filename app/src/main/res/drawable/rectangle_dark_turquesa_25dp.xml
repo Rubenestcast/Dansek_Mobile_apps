@@ -3,10 +3,10 @@
     android:shape="rectangle">
 
     <!-- Fondo del rectángulo -->
-    <solid android:color="#0390A8" />
+    <solid android:color="@color/colorSelected" />
 
     <!-- Bordes redondeados del rectángulo -->
-    <corners android:radius="25dp" />
+    <corners android:radius="@dimen/general_corner_25dp" />
 
     <!-- Opcional: Padding del rectángulo -->
     <padding
