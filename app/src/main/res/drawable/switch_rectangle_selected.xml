@@ -6,7 +6,7 @@
     <solid android:color="@color/colorSelected" />
 
     <!-- Bordes redondeados del rectángulo -->
-    <corners android:radius="25dp" />
+    <corners android:radius="@dimen/small_rectangle_corner_radius" />
 
     <!-- Opcional: Padding del rectángulo -->
     <padding

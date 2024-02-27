@@ -16,13 +16,17 @@
             android:name=".SignUp"
             android:exported="false"
             android:label="@string/title_activity_sign_up"
-            android:theme="@style/Theme.Dansek" />
+            android:theme="@style/Theme.Dansek"
+            android:windowLayoutInDisplayCutoutMode="shortEdges"
+            />
         <activity
             android:name=".Login"
-            android:exported="false" />
+            android:exported="false"
+            android:windowLayoutInDisplayCutoutMode="shortEdges"/>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:windowLayoutInDisplayCutoutMode="shortEdges">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

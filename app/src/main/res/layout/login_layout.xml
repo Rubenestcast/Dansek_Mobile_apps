@@ -21,6 +21,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="202dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:adjustViewBounds="true"
+        android:elevation="10dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.00" />
+
     <!-- Cuadro central -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/central_box"
@@ -73,7 +91,7 @@
                 <!-- Recuadro pequeño -->
                 <TextView
                     android:id="@+id/smallRectangle"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/switch_rectangle_selected"
                     android:fontFamily="@font/nunito_black"
@@ -119,5 +137,28 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/log_in_button"
+        android:fontFamily="@font/nunito_extrabold"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        android:stateListAnimator="@null"
+        android:text="@string/login_main_button"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/central_box"
+        app:layout_constraintVertical_bias="0.295" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
