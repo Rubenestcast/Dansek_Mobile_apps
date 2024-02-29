@@ -61,7 +61,7 @@
         app:drawableStartCompat="@drawable/baseline_menu_24" />
 
     <TextView
-        android:id="@+id/map"
+        android:id="@+id/mapMenu"
         android:layout_width="35dp"
         android:layout_height="35dp"
 
