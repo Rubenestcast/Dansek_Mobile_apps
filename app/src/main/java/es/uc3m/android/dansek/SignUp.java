@@ -11,15 +11,23 @@ import android.widget.TextView;
 public class SignUp extends AppCompatActivity implements GestureDetector.OnGestureListener {
 
     private GestureDetector gestureDetector;
-    private TextView signUpButton;
+    private TextView signUpButton_drag;
+
+    private TextView sign_upButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up_layout);
 
-        signUpButton = findViewById(R.id.smallRectangle);
+        signUpButton_drag = findViewById(R.id.smallRectangle);
+        sign_upButton = findViewById(R.id.signUpButton);
         this.gestureDetector = new GestureDetector(this, this);
+
+        sign_upButton.setOnClickListener(view -> {
+            Intent intent = new Intent(getBaseContext(), PrincipalScreen.class);
+            startActivity(intent);
+        });
 
     }
 
@@ -55,10 +63,10 @@ public class SignUp extends AppCompatActivity implements GestureDetector.OnGestu
         int displacement = (parentWidth) - (4 * getResources().getDimensionPixelSize(R.dimen.general_corner_25dp));
 
         // Implementar el efecto de transición (por ejemplo, animar el botón)
-        signUpButton.animate().translationXBy(-displacement).setDuration(100).start();
+        signUpButton_drag.animate().translationXBy(-displacement).setDuration(100).start();
 
         // Iniciar LoginActivity después de un breve retraso
-        signUpButton.postDelayed(() -> {
+        signUpButton_drag.postDelayed(() -> {
             Intent intent = new Intent(SignUp.this, Login.class);
             startActivity(intent);
             finish();
