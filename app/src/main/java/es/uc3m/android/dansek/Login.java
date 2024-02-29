@@ -39,12 +39,10 @@ public class Login extends AppCompatActivity implements GestureDetector.OnGestur
         this.gestureDetector.onTouchEvent(event);
         return super.onTouchEvent(event);
     }
-
     @Override
     public boolean onDown(MotionEvent e) {
         return true;
     }
-
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
         if (e1.getX() > e2.getX()) {
