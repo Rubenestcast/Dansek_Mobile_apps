@@ -52,7 +52,7 @@ public class SignUp extends AppCompatActivity implements GestureDetector.OnGestu
         int parentWidth = findViewById(R.id.frameLayout).getWidth();
 
         // Calcular la distancia de desplazamiento (considerando los bordes redondeados)
-        int displacement = (parentWidth) - (4 * getResources().getDimensionPixelSize(R.dimen.frame_layout_corner_radius));
+        int displacement = (parentWidth) - (4 * getResources().getDimensionPixelSize(R.dimen.general_corner_25dp));
 
         // Implementar el efecto de transición (por ejemplo, animar el botón)
         signUpButton.animate().translationXBy(-displacement).setDuration(100).start();
