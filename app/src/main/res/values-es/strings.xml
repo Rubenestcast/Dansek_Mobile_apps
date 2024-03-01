@@ -3,7 +3,7 @@
     <string name="app_name">Dansek</string>
     <string name="main_intro">Bienvenido a la noche de tus sueños</string>
     <string name="logIn_intro">Bienvenido a Dansek, donde encontrarás tus mejores noches</string>
-    <string name="no_account_yet">No tienes cuenta todavía?</string>
+    <string name="Nightclubs_access">Acceder espacio Clubes</string>
     <string name="login_main_button">Acceder</string>
     <string name="signUp_main_button">Registrarse</string>
     <string name="hint_Email_LogIn">Email</string>
