@@ -77,7 +77,7 @@
         android:shadowDx="2"
         android:shadowDy="2"
         android:shadowRadius="3"
-        android:text="@string/no_account_yet"
+        android:text="@string/Nightclubs_access"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="16sp"
