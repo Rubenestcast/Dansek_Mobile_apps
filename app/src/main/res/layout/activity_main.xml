@@ -16,7 +16,7 @@
         android:shadowDx="2"
         android:shadowDy="2"
         android:shadowRadius="3"
-        android:text="@string/app_description"
+        android:text="@string/main_intro"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="24sp"
