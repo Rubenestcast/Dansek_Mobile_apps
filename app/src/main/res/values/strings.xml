@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Dansek</string>
     <string name="main_intro">Welcome to the night of your dreams</string>
-    <string name="logIn_intro">Welcome to Dansek, welcome to your best nights!</string>
-    <string name="no_account_yet">Not an account yet?</string>
+    <string name="logIn_intro">Welcome to Dansek, where you will find your best nights!</string>
+    <string name="Nightclubs_access">Access Nightclubs view</string>
     <string name="login_main_button">Log In</string>
     <string name="signUp_main_button">SignUp</string>
     <string name="hint_Email_LogIn">Email</string>
