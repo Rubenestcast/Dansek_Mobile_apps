@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Dansek</string>
     <string name="main_intro">Bienvenido a la noche de tus sueños</string>
     <string name="logIn_intro">Bienvenido a Dansek, donde encontrarás tus mejores noches</string>
     <string name="Nightclubs_access">Acceder espacio Clubes</string>
@@ -12,9 +11,9 @@
     <string name="title_activity_sign_up">Registrarse</string>
     <string name="Search_bar">Buscar...</string>
     <string name="Menu_Home">Home</string>
-    <string name="Menu_Profile">Profile</string>
-    <string name="Menu_Points">Mis puntos</string>
-    <string name="Menu_Tickets">Mis tickets</string>
-    <string name="Settings">Configuracion</string>
+    <string name="Menu_Profile">Mi Perfil</string>
+    <string name="Menu_Points">Mis Puntos</string>
+    <string name="Menu_Tickets">Mis Tickets</string>
+    <string name="Settings">Configuración</string>
     <string name="opcion_tarde_1">Tardeo</string>
 </resources>
