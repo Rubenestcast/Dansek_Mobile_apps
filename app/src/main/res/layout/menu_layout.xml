@@ -32,5 +32,97 @@
         tools:ignore="RtlSymmetry"
         android:layout_gravity="center"
         android:gravity="center"
-        app:drawableStartCompat="@drawable/baseline_home_24" />
+        app:drawableStartCompat="@drawable/baseline_home_30" />
+
+    <TextView
+        android:id="@+id/Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:text="@string/Menu_Profile"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="24sp"
+        app:drawableStartCompat="@drawable/baseline_profile_30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.218"
+        tools:ignore="RtlSymmetry" />
+
+
+
+    <TextView
+        android:id="@+id/Points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:text="@string/Menu_Points"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="24sp"
+        app:drawableStartCompat="@drawable/baseline_coins_30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.308"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/Tickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:text="@string/Menu_Tickets"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="24sp"
+        app:drawableStartCompat="@drawable/baseline_tickets_30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/Settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:text="@string/Settings"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="24sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.482"
+        tools:ignore="RtlSymmetry"
+        app:drawableStartCompat="@drawable/baseline_settings_30" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
