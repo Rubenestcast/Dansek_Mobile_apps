@@ -9,30 +9,28 @@
         android:id="@+id/color_overlay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#030023"
-        android:alpha="0.90"/>
+        android:alpha="0.90"
+        android:background="#030023" />
 
     <TextView
         android:id="@+id/Home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:drawablePadding="8dp"
         android:fontFamily="@font/nunito_extrabold"
-        android:text="@string/Menu_Home"
+        android:gravity="center"
         android:paddingStart="15dp"
+        android:text="@string/Menu_Home"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
         android:textSize="24sp"
+        app:drawableStartCompat="@drawable/baseline_home_30"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.058"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.129"
-        tools:ignore="RtlSymmetry"
-        android:layout_gravity="center"
-        android:gravity="center"
-        app:drawableStartCompat="@drawable/baseline_home_30" />
+        tools:ignore="MissingConstraints,RtlSymmetry"
+        tools:layout_editor_absoluteX="15dp" />
 
     <TextView
         android:id="@+id/Profile"
@@ -49,13 +47,10 @@
         android:textSize="24sp"
         app:drawableStartCompat="@drawable/baseline_profile_30"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.059"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Home"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.218"
         tools:ignore="RtlSymmetry" />
-
 
 
     <TextView
@@ -73,9 +68,7 @@
         android:textSize="24sp"
         app:drawableStartCompat="@drawable/baseline_coins_30"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Profile"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.308"
         tools:ignore="RtlSymmetry" />
@@ -95,9 +88,7 @@
         android:textSize="24sp"
         app:drawableStartCompat="@drawable/baseline_tickets_30"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Points"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.4"
         tools:ignore="RtlSymmetry" />
@@ -116,13 +107,11 @@
         android:textColorHint="@android:color/white"
         android:textSize="24sp"
 
+        app:drawableStartCompat="@drawable/baseline_settings_30"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.058"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Tickets"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.482"
-        tools:ignore="RtlSymmetry"
-        app:drawableStartCompat="@drawable/baseline_settings_30" />
+        tools:ignore="RtlSymmetry" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
