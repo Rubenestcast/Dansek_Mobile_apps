@@ -11,11 +11,12 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.widget.TextView;
 
+
 public class Login extends AppCompatActivity implements GestureDetector.OnGestureListener {
 
     private GestureDetector gestureDetector;
     private TextView login_button_drag;
-    private TextView login_button;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +24,10 @@ public class Login extends AppCompatActivity implements GestureDetector.OnGestur
         setContentView(R.layout.login_layout);
 
         login_button_drag  = findViewById(R.id.smallRectangle);
-        login_button = findViewById(R.id.loginButton);
+        TextView login_button = findViewById(R.id.loginButton);
         this.gestureDetector = new GestureDetector(this,this);
+
+
 
         login_button.setOnClickListener(view -> {
             Intent intent = new Intent(getBaseContext(), PrincipalScreen.class);
@@ -73,6 +76,31 @@ public class Login extends AppCompatActivity implements GestureDetector.OnGestur
             finish();
         }, 50); // El retraso debe coincidir con la duración de la animación
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
