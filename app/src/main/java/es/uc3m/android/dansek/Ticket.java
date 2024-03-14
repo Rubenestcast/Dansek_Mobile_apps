@@ -1,13 +1,5 @@
 package es.uc3m.android.dansek;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.widget.Button;
-import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
 public class Ticket {
     private String id;
     private String nombre;
