@@ -16,4 +16,9 @@
     <string name="Menu_Tickets">Mis Tickets</string>
     <string name="Settings">Configuración</string>
     <string name="opcion_tarde_1">Tardeo</string>
+    <string name="Selectyourcity">Elige tu ciudad</string>
+    <string name="Selectyourzone">Elige tu zona</string>
+    <string name="Anyfacility">¿Algún servicio?</string>
+    <string name="Uber">Uber</string>
+    <string name="Taxi">Taxi</string>
 </resources>
