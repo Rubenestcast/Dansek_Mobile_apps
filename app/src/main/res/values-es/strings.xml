@@ -21,4 +21,7 @@
     <string name="Anyfacility">¿Algún servicio?</string>
     <string name="Uber">Uber</string>
     <string name="Taxi">Taxi</string>
+    <string name="Points_of_each">Puntos cada</string>
+    <string name="title_of_my_points_">Titulo mis puntos</string>
+    <string name="app_name">Nombre App</string>
 </resources>
