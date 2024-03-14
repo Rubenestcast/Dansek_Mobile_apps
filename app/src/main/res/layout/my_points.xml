@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context=".Login">
 
     <View
         android:id="@+id/color_overlay"
@@ -11,12 +13,11 @@
         android:layout_height="match_parent"
         android:alpha="0.90"
         android:background="#DD01CC"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="53dp" />
 
     <TextView
         android:id="@+id/My_Points"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -51,6 +52,16 @@
         tools:layout_editor_absoluteX="92dp"
         tools:layout_editor_absoluteY="236dp"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/left_arrow_tickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/arrow_left_solid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
