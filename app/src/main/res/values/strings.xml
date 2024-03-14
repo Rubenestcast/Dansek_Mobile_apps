@@ -21,4 +21,6 @@
     <string name="Anyfacility">Any facility?</string>
     <string name="Uber">Uber</string>
     <string name="Taxi">Taxi</string>
+    <string name="Points_of_each">XXX</string>
+    <string name="title_of_my_points_">MY POINTS</string>
 </resources>
