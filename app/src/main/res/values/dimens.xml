@@ -3,4 +3,8 @@
     <dimen name="general_corner_25dp">25dp</dimen>
 
     <dimen name="general_corner_20dp">20dp</dimen>
+
+    <dimen name="width_rectangle_50">50dp</dimen>
+
+
 </resources>

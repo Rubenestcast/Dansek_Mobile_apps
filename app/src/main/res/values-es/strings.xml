@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Dansek</string>
     <string name="main_intro">Bienvenido a la noche de tus sueños</string>
     <string name="logIn_intro">Bienvenido a Dansek, donde encontrarás tus mejores noches</string>
     <string name="Nightclubs_access">Acceder espacio Clubes</string>
