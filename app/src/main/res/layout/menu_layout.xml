@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.90"
-        android:background="#030023" />
+        android:background="@color/background_dark_blue" />
 
     <TextView
         android:id="@+id/Home"

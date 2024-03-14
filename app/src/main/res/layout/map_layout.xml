@@ -1,13 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
+
 
     <View
         android:id="@+id/color_overlay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#030023"
-        android:alpha="0.90"/>
-</LinearLayout>
+        android:alpha="0.90"
+        android:background="@color/background_dark_blue"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/Selectyourcity"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/rectangle_light_grey_25dp"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:text="@string/Selectyourcity"
+        android:textColor="@color/blue_letter"
+        android:textColorHint="@android:color/white"
+        android:textSize="24sp"
+        app:drawableEndCompat="@drawable/flecha_abajo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.122"
+        tools:ignore="MissingConstraints,RtlSymmetry"
+        tools:layout_editor_absoluteX="150dp" />
+
+    <TextView
+        android:id="@+id/Selectyourzone"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/rectangle_light_grey_25dp"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:text="@string/Selectyourzone"
+        android:textColor="@color/blue_letter"
+        android:textColorHint="@android:color/white"
+        android:textSize="24sp"
+        app:drawableEndCompat="@drawable/flecha_abajo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.236"
+        tools:ignore="MissingConstraints,RtlSymmetry"
+        tools:layout_editor_absoluteX="150dp" />
+
+    <TextView
+        android:id="@+id/Anyfacility"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:text="@string/Anyfacility"
+        android:textColor="@color/light_grey"
+        android:textColorHint="@android:color/white"
+        android:textSize="24sp"
+        app:drawableEndCompat="@drawable/flecha_abajo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.367"
+        tools:ignore="MissingConstraints,RtlSymmetry"
+        tools:layout_editor_absoluteX="150dp" />
+
+    <TextView
+        android:id="@+id/Uber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:text="@string/Uber"
+        android:textColor="@color/light_grey"
+        android:textColorHint="@android:color/white"
+        android:textSize="24sp"
+        app:drawableEndCompat="@drawable/flecha_abajo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.541"
+        tools:ignore="MissingConstraints,RtlSymmetry"
+        tools:layout_editor_absoluteX="136dp" />
+
+    <TextView
+        android:id="@+id/Taxi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:text="@string/Taxi"
+        android:textColor="@color/light_grey"
+        android:textColorHint="@android:color/white"
+        android:textSize="24sp"
+        app:drawableEndCompat="@drawable/flecha_abajo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.541"
+        tools:ignore="MissingConstraints,RtlSymmetry"
+        tools:layout_editor_absoluteX="247dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

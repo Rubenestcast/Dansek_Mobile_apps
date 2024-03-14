@@ -157,10 +157,7 @@
         android:background="@drawable/rectangle_light_blue_20dp"
         android:fontFamily="@font/nunito_extrabold"
         android:gravity="center|center_horizontal|center_vertical"
-        android:paddingStart="8dp"
-        android:paddingTop="8dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="8dp"
+
         android:stateListAnimator="@null"
         android:text="@string/login_main_button"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
