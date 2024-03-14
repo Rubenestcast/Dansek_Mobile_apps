@@ -16,3 +16,4 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.menu_layout);
     }
 }
+
