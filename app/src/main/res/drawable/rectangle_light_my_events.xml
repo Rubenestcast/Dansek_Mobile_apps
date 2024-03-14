@@ -5,7 +5,7 @@
     <corners android:radius="85dp" /> <!-- Radio de los bordes redondeados -->
     <stroke
         android:color="@color/pink_cremoso"
-        android:width="1dp" <!-- Grosor del borde -->
+        android:width="1dp"/> <!-- Grosor del borde -->
 </shape>
 
 
