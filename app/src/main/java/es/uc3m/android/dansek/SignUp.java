@@ -6,14 +6,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.widget.EditText;
 import android.widget.TextView;
+
+import android.view.View;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import static es.uc3m.android.firebase.LoginActivity.displayDialog;
 
 public class SignUp extends AppCompatActivity implements GestureDetector.OnGestureListener {
 
     private GestureDetector gestureDetector;
     private TextView signUpButton_drag;
 
-    private TextView sign_upButton;
+    private FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +29,10 @@ public class SignUp extends AppCompatActivity implements GestureDetector.OnGestu
         setContentView(R.layout.sign_up_layout);
 
         signUpButton_drag = findViewById(R.id.smallRectangle);
-        sign_upButton = findViewById(R.id.signUpButton);
+        TextView sign_upButton = findViewById(R.id.signUpButton);
         this.gestureDetector = new GestureDetector(this, this);
+
+
 
         sign_upButton.setOnClickListener(view -> {
             Intent intent = new Intent(getBaseContext(), PrincipalScreen.class);
@@ -31,6 +41,43 @@ public class SignUp extends AppCompatActivity implements GestureDetector.OnGestu
 
     }
 
+    private void signUp(View view) {
+        EditText userEmail = findViewById(R.id.email_edit_text);
+        EditText userPassword = findViewById(R.id.password_edit_text);
+        EditText userPasswordConfirm = findViewById(R.id.password_edit_text2);
+
+        String email = userEmail.getText().toString();
+        String password = userPassword.getText().toString();
+        String passwordConfirm = userPasswordConfirm.getText().toString();
+
+        if (!isValidEmailAddress(email)) {
+            displayDialog(this, R.string.sing_up_error_title, R.string.sing_up_error_invalid_email);
+        } else if (!password.equals(passwordConfirm)) {
+            displayDialog(this, R.string.sing_up_error_title, R.string.sing_up_error_passwd_diff);
+        } else if (password.length() < 6) {
+            displayDialog(this, R.string.sing_up_error_title, R.string.sing_up_error_passwd_diff);
+        } else {
+            // Initialize Firebase Auth
+            FirebaseAuth mAuth = FirebaseAuth.getInstance();
+
+            // Create user
+            mAuth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new MyCompleteListener(this, mAuth));
+        }
+    }
+
+    private void signIn(View view) {
+        finish();
+    }
+
+    // Source: https://stackoverflow.com/questions/624581/what-is-the-best-java-email-address-validation-method
+    public boolean isValidEmailAddress(String email) {
+        String ePattern =
+                "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
+        java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
+        java.util.regex.Matcher m = p.matcher(email);
+        return m.matches();
+    }
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         this.gestureDetector.onTouchEvent(event);

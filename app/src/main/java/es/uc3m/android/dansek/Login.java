@@ -2,15 +2,19 @@ package es.uc3m.android.dansek;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.widget.TextView;
+import android.view.View;
+import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Login extends AppCompatActivity implements GestureDetector.OnGestureListener {
 
@@ -35,6 +39,39 @@ public class Login extends AppCompatActivity implements GestureDetector.OnGestur
         });
 
 
+    }
+    private void login(View view) {
+        EditText userEmail = findViewById(R.id.email_edit_text);
+        EditText userPassword = findViewById(R.id.password_edit_text);
+
+        String email = userEmail.getText().toString();
+        String password = userPassword.getText().toString();
+
+        if (email.isEmpty()) {
+            displayDialog(this, R.string.login_error_title, R.string.login_error_empty_email);
+        } else if (password.isEmpty()) {
+            displayDialog(this, R.string.login_error_title, R.string.login_error_empty_passwd);
+        } else {
+            // Initialize Firebase Auth
+            FirebaseAuth mAuth = FirebaseAuth.getInstance();
+
+            // Login user
+            mAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new MyCompleteListener(this, mAuth));
+        }
+    }
+
+    private void signUp(View view) {
+        Intent intent = new Intent(getBaseContext(), SignUpActivity.class);
+        startActivity(intent);
+    }
+    public static void displayDialog(Context context, int title_id, int error_message_id) {
+        AlertDialog.Builder ad = new AlertDialog.Builder(context);
+        ad.setTitle(title_id);
+        ad.setMessage(error_message_id);
+        ad.setPositiveButton(R.string.sing_up_error_button,
+                (dialog, position) -> dialog.cancel());
+        ad.show();
     }
 
     @Override
