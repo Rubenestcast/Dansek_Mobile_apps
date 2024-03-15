@@ -8,6 +8,9 @@
     <string name="login_error_empty_email">Email vacío!</string>
     <string name="login_error_empty_passwd">Contraseña vacía!</string>
     <string name="signUp_main_button">Registrarse</string>
+    <string name="sing_up_error_title">Registro incorrecto</string>
+    <string name="sing_up_error_invalid_email">Email inválido</string>
+    <string name="sing_up_error_passwd_diff">Contraseñas diferentes</string>
     <string name="hint_Email_LogIn">Email</string>
     <string name="hint_Password_LogIn">Contraseña</string>
     <string name="hint_repeat_Password_SignUp">Repetir contraseña</string>
@@ -28,4 +31,7 @@
     <string name="title_of_my_points_">Title of my points</string>
     <string name="Points_of_each">Points of each</string>
     <string name="auth_failed">Error en la autenticación</string>
+    <string name="Tardeo">Tardeo</string>
+    <string name="Techno">Tecno</string>
+    <string name="AM_6">6 AM</string>
 </resources>

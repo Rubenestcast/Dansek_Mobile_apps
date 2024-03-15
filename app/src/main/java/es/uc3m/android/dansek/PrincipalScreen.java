@@ -49,7 +49,7 @@ public class PrincipalScreen extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int screenWidth = displayMetrics.widthPixels;
 
-        float menuWidthFloat = (float) screenWidth / 1.5f;
+        float menuWidthFloat = (float) screenWidth;
         int menuWidth = (int) menuWidthFloat;
 
 

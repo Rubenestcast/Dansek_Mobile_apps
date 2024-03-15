@@ -31,4 +31,7 @@
     <string name="title_of_my_points_">Title of my points</string>
     <string name="Points_of_each">Points of each</string>
     <string name="auth_failed">Authentication failed</string>
+    <string name="Tardeo">Tardeo</string>
+    <string name="AM_6">6 AM</string>
+    <string name="Techno">Techno</string>
 </resources>
