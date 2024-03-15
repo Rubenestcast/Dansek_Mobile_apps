@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context=".Login">
 
     <View
         android:id="@+id/color_overlay"
@@ -12,36 +13,30 @@
         android:layout_height="match_parent"
         android:alpha="0.90"
         android:background="#DD01CC"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="53dp" />
 
     <TextView
         android:id="@+id/My_Points"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="160dp"
         android:drawablePadding="8dp"
         android:fontFamily="@font/nunito_extrabold"
         android:gravity="center"
+        android:paddingStart="15dp"
         android:text="@string/title_of_my_points_"
-        android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/Puntos_Persona"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/color_overlay"
-        app:layout_constraintVertical_bias="0.26"
-        tools:ignore="MissingConstraints,RtlSymmetry" />
+        tools:ignore="MissingConstraints,RtlSymmetry"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="169dp" />
 
     <Button
         android:id="@+id/Puntos_Persona"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="432dp"
         android:background="@drawable/rectangle_light_blue_20dp"
         android:fontFamily="@font/nunito_extrabold"
         android:gravity="center|center_horizontal|center_vertical"
@@ -54,11 +49,19 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/color_overlay"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="236dp"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/left_arrow_tickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/arrow_left_solid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
