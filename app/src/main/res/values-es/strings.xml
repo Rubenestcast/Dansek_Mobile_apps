@@ -4,6 +4,9 @@
     <string name="logIn_intro">Bienvenido a Dansek, donde encontrarás tus mejores noches</string>
     <string name="Nightclubs_access">Acceder espacio Clubes</string>
     <string name="login_main_button">Acceder</string>
+    <string name="login_error_title">Error en LogIn</string>
+    <string name="login_error_empty_email">Email vacío!</string>
+    <string name="login_error_empty_passwd">Contraseña vacía!</string>
     <string name="signUp_main_button">Registrarse</string>
     <string name="hint_Email_LogIn">Email</string>
     <string name="hint_Password_LogIn">Contraseña</string>
@@ -24,4 +27,5 @@
     <string name="Hospital">Hospital</string>
     <string name="title_of_my_points_">Title of my points</string>
     <string name="Points_of_each">Points of each</string>
+    <string name="auth_failed">Error en la autenticación</string>
 </resources>

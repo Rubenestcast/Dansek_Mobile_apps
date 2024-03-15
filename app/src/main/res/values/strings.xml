@@ -1,10 +1,16 @@
 <resources>
-    <string name="app_name">Dansek</string>
+    <string name="app_name" translatable="false">Dansek</string>
     <string name="main_intro">Welcome to the night of your dreams</string>
     <string name="logIn_intro">Welcome to Dansek, where you will find your best nights!</string>
     <string name="Nightclubs_access">Access Nightclubs view</string>
     <string name="login_main_button">Log In</string>
+    <string name="login_error_title">Wrong LogIn</string>
+    <string name="login_error_empty_email">Empty email!</string>
+    <string name="login_error_empty_passwd">Empty password!</string>
     <string name="signUp_main_button">SignUp</string>
+    <string name="sing_up_error_title">Wrong SignUp</string>
+    <string name="sing_up_error_invalid_email">Invalid email!</string>
+    <string name="sing_up_error_passwd_diff">different passwords!</string>
     <string name="hint_Email_LogIn">Email</string>
     <string name="hint_Password_LogIn">Password</string>
     <string name="hint_repeat_Password_SignUp">Repeat password</string>
@@ -24,4 +30,5 @@
     <string name="Hospital">Hospital</string>
     <string name="title_of_my_points_">Title of my points</string>
     <string name="Points_of_each">Points of each</string>
+    <string name="auth_failed">Authentication failed</string>
 </resources>

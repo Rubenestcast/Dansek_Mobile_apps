@@ -10,18 +10,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.FirebaseFirestore;
 
-import static es.uc3m.android.firebase.LoginActivity.displayDialog;
+import static es.uc3m.android.dansek.Login.displayDialog;
 
 public class SignUp extends AppCompatActivity implements GestureDetector.OnGestureListener {
 
     private GestureDetector gestureDetector;
     private TextView signUpButton_drag;
 
-    private FirebaseFirestore db;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,15 +33,14 @@ public class SignUp extends AppCompatActivity implements GestureDetector.OnGestu
         this.gestureDetector = new GestureDetector(this, this);
 
 
+        findViewById(R.id.signUpButton).setOnClickListener(this::signUp);
 
-        sign_upButton.setOnClickListener(view -> {
-            Intent intent = new Intent(getBaseContext(), PrincipalScreen.class);
-            startActivity(intent);
-        });
+
 
     }
 
     private void signUp(View view) {
+
         EditText userEmail = findViewById(R.id.email_edit_text);
         EditText userPassword = findViewById(R.id.password_edit_text);
         EditText userPasswordConfirm = findViewById(R.id.password_edit_text2);
@@ -63,12 +62,14 @@ public class SignUp extends AppCompatActivity implements GestureDetector.OnGestu
             // Create user
             mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, new MyCompleteListener(this, mAuth));
+
+
         }
+
+
     }
 
-    private void signIn(View view) {
-        finish();
-    }
+
 
     // Source: https://stackoverflow.com/questions/624581/what-is-the-best-java-email-address-validation-method
     public boolean isValidEmailAddress(String email) {
@@ -78,6 +79,8 @@ public class SignUp extends AppCompatActivity implements GestureDetector.OnGestu
         java.util.regex.Matcher m = p.matcher(email);
         return m.matches();
     }
+
+    // These below are the methods we ose for the drag movement
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         this.gestureDetector.onTouchEvent(event);
