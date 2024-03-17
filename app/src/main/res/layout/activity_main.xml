@@ -69,7 +69,7 @@
         app:layout_constraintVertical_bias="0.835" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/nightclub_acces"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_black"

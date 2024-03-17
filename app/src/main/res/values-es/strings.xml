@@ -2,6 +2,7 @@
 <resources>
     <string name="main_intro">Bienvenido a la noche de tus sueños</string>
     <string name="logIn_intro">Bienvenido a Dansek, donde encontrarás tus mejores noches</string>
+    <string name="logIn_nightclubs_intro">Bienvenido a Dansek, donde podrás mofertar tus servicios a todo el mundo</string>
     <string name="Nightclubs_access">Acceder espacio Clubes</string>
     <string name="login_main_button">Acceder</string>
     <string name="login_error_title">Error en LogIn</string>
@@ -12,6 +13,7 @@
     <string name="sing_up_error_invalid_email">Email inválido</string>
     <string name="sing_up_error_passwd_diff">Contraseñas diferentes</string>
     <string name="hint_Email_LogIn">Email</string>
+    <string name="hint_direccion_facturacion_LogIn">Dirección facturacion</string>
     <string name="hint_Password_LogIn">Contraseña</string>
     <string name="hint_repeat_Password_SignUp">Repetir contraseña</string>
     <string name="title_activity_sign_up">Registrarse</string>

@@ -2,6 +2,7 @@
     <string name="app_name" translatable="false">Dansek</string>
     <string name="main_intro">Welcome to the night of your dreams</string>
     <string name="logIn_intro">Welcome to Dansek, where you will find your best nights!</string>
+    <string name="logIn_nightclubs_intro">Welcome to Dansek, where you can offer your activities to the world</string>
     <string name="Nightclubs_access">Access Nightclubs view</string>
     <string name="login_main_button">Log In</string>
     <string name="login_error_title">Wrong LogIn</string>
@@ -12,6 +13,7 @@
     <string name="sing_up_error_invalid_email">Invalid email!</string>
     <string name="sing_up_error_passwd_diff">different passwords!</string>
     <string name="hint_Email_LogIn">Email</string>
+    <string name="hint_direccion_facturacion_LogIn">Dirección facturacion</string>
     <string name="hint_Password_LogIn">Password</string>
     <string name="hint_repeat_Password_SignUp">Repeat password</string>
     <string name="title_activity_sign_up">SignUp</string>
