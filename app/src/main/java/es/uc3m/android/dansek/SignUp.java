@@ -33,7 +33,7 @@ public class SignUp extends AppCompatActivity implements GestureDetector.OnGestu
         this.gestureDetector = new GestureDetector(this, this);
 
 
-        findViewById(R.id.signUpButton).setOnClickListener(this::signUp);
+        sign_upButton.setOnClickListener(this::signUp);
 
         TextView backButton = findViewById(R.id.back_button_signup);
         backButton.setOnClickListener(new View.OnClickListener() {

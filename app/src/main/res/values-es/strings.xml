@@ -36,4 +36,5 @@
     <string name="Tardeo">Tardeo</string>
     <string name="Techno">Tecno</string>
     <string name="AM_6">6 AM</string>
+    <string name="Add_event_bar">Nuevo evento</string>
 </resources>

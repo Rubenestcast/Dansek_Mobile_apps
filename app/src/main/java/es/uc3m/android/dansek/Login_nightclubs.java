@@ -29,7 +29,7 @@ public class Login_nightclubs extends AppCompatActivity implements GestureDetect
         login_button_drag_nightclubs  = findViewById(R.id.smallRectangle_nightclubs);
         this.gestureDetector = new GestureDetector(this,this);
 
-        findViewById(R.id.loginButton_nightclubs).setOnClickListener(this::login);
+        login_button.setOnClickListener(this::login);
 
         TextView backButton = findViewById(R.id.back_button_login_nightclubs);
         backButton.setOnClickListener(new View.OnClickListener() {

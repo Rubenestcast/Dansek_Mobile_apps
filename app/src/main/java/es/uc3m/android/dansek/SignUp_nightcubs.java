@@ -31,7 +31,7 @@ public class SignUp_nightcubs extends AppCompatActivity implements GestureDetect
         this.gestureDetector = new GestureDetector(this, this);
 
 
-        findViewById(R.id.signUpButton_nightclubs).setOnClickListener(this::signUp);
+        findViewById(R.id.signUpButton_nightclubs).setOnClickListener(this::signUp_nightclubs);
 
         TextView backButton = findViewById(R.id.back_button_signup_nightclubs);
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +47,7 @@ public class SignUp_nightcubs extends AppCompatActivity implements GestureDetect
 
     }
 
-    private void signUp(View view) {
+    private void signUp_nightclubs(View view) {
 
         EditText userEmail = findViewById(R.id.email_edit_text_nightclubs);
         EditText nightclubDirection = findViewById(R.id.direcion_facturacion_edit_text);

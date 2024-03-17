@@ -30,7 +30,7 @@ public class Login extends AppCompatActivity implements GestureDetector.OnGestur
         TextView login_button = findViewById(R.id.loginButton);
         this.gestureDetector = new GestureDetector(this,this);
 
-        findViewById(R.id.loginButton).setOnClickListener(this::login);
+        login_button.setOnClickListener(this::login);
 
         TextView backButton = findViewById(R.id.back_button_login);
         backButton.setOnClickListener(new View.OnClickListener() {
