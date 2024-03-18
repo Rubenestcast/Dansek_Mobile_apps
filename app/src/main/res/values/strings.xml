@@ -37,4 +37,8 @@
     <string name="AM_6">6 AM</string>
     <string name="Techno">Techno</string>
     <string name="Add_event_bar">Add event</string>
+    <string name="OpenMap">Open map</string>
+    <string name="Map_question">Are you ready for the best experience of your life?</string>
+    <string name="sixam_in">6 AM in Madrid... </string>
+    <string name="AQUIVAELMAPA">AQUI VA EL MAPA</string>
 </resources>

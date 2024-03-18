@@ -38,4 +38,8 @@
     <string name="Techno">Tecno</string>
     <string name="AM_6">6 AM</string>
     <string name="Add_event_bar">Nuevo evento</string>
+    <string name="OpenMap">Abrir mapa</string>
+    <string name="Map_question">¿Preparado para la mejor experiencia de tu vida?</string>
+    <string name="sixam_in">6 AM en Madrid... </string>
+    <string name="AQUIVAELMAPA">AQUI VA EL MAPA</string>
 </resources>
