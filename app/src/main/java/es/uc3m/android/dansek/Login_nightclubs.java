@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import static es.uc3m.android.dansek.Login.displayDialog;
+
 public class Login_nightclubs extends AppCompatActivity implements GestureDetector.OnGestureListener {
 
     private GestureDetector gestureDetector;
@@ -67,12 +69,7 @@ public class Login_nightclubs extends AppCompatActivity implements GestureDetect
 
     }
 
-    public static void displayDialog(Context context, int title_id, int error_message_id) {
-        AlertDialog.Builder ad = new AlertDialog.Builder(context);
-        ad.setTitle(title_id);
-        ad.setMessage(error_message_id);
-        ad.show();
-    }
+
 
 
     

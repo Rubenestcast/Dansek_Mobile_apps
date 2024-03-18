@@ -1,6 +1,8 @@
 package es.uc3m.android.dansek;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 
 import static es.uc3m.android.dansek.Login.displayDialog;
+
 
 public class SignUp extends AppCompatActivity implements GestureDetector.OnGestureListener {
 
@@ -36,15 +39,10 @@ public class SignUp extends AppCompatActivity implements GestureDetector.OnGestu
         sign_upButton.setOnClickListener(this::signUp);
 
         TextView backButton = findViewById(R.id.back_button_signup);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Iniciar la actividad MainActivity
-                Intent intent = new Intent(SignUp.this, MainActivity.class);
-                startActivity(intent);
-                // Cerrar la actividad actual
-                finish();
-            }
+        backButton.setOnClickListener(view -> {
+            Intent intent = new Intent(getBaseContext(), MainActivity.class);
+            startActivity(intent);
+
         });
 
     }
@@ -60,11 +58,11 @@ public class SignUp extends AppCompatActivity implements GestureDetector.OnGestu
         String passwordConfirm = userPasswordConfirm.getText().toString();
 
         if (!isValidEmailAddress(email)) {
-            displayDialog(this, R.string.sing_up_error_title, R.string.sing_up_error_invalid_email);
+            displayDialog(this, R.string.sign_up_error_title, R.string.sign_up_error_invalid_email);
         } else if (!password.equals(passwordConfirm)) {
-            displayDialog(this, R.string.sing_up_error_title, R.string.sing_up_error_passwd_diff);
+            displayDialog(this, R.string.sign_up_error_title, R.string.sign_up_error_passwd_diff);
         } else if (password.length() < 6) {
-            displayDialog(this, R.string.sing_up_error_title, R.string.sing_up_error_passwd_diff);
+            displayDialog(this, R.string.sign_up_error_title, R.string.sign_up_error_passwd_diff);
         } else {
             // Initialize Firebase Auth
             FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -140,8 +138,13 @@ public class SignUp extends AppCompatActivity implements GestureDetector.OnGestu
     // Unused methods below, removed for simplicity
     @Override
     public void onShowPress(MotionEvent e) {}
+
     @Override
-    public boolean onSingleTapUp(MotionEvent e) { return true; }
+    public boolean onSingleTapUp(@NonNull MotionEvent e) {
+        return false;
+    }
+
+
     @Override
     public void onLongPress(MotionEvent e) {}
     @Override

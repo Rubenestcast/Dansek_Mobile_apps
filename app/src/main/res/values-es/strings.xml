@@ -10,9 +10,9 @@
     <string name="login_error_empty_email">Email vacío!</string>
     <string name="login_error_empty_passwd">Contraseña vacía!</string>
     <string name="signUp_main_button">Registrarse</string>
-    <string name="sing_up_error_title">Registro incorrecto</string>
-    <string name="sing_up_error_invalid_email">Email inválido</string>
-    <string name="sing_up_error_passwd_diff">Contraseñas diferentes</string>
+    <string name="sign_up_error_title">Registro incorrecto</string>
+    <string name="sign_up_error_invalid_email">Email inválido</string>
+    <string name="sign_up_error_passwd_diff">Contraseñas diferentes</string>
     <string name="hint_Email_LogIn">Email</string>
     <string name="hint_direccion_facturacion_LogIn">Dirección facturacion</string>
     <string name="hint_Password_LogIn">Contraseña</string>

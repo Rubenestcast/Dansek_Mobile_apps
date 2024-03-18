@@ -79,48 +79,10 @@
         tools:ignore="MissingConstraints,RtlSymmetry"
         tools:layout_editor_absoluteX="66dp" />
 
-    <!-- Grupo Uber - Uber_image -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/group_uber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/group_taxi"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/Anyfacility"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.457">
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!-- Grupo Taxi - Taxi_image -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/group_taxi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/group_hospital"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/group_uber"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.457">
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!-- Grupo Hospital - Hospital_image -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/group_hospital"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/group_taxi"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.457">
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/Taxi_image"

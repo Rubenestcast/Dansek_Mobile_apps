@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -60,11 +61,11 @@ public class SignUp_nightcubs extends AppCompatActivity implements GestureDetect
         String passwordConfirm = userPasswordConfirm.getText().toString();
 
         if (!isValidEmailAddress(email)) {
-            displayDialog(this, R.string.sing_up_error_title, R.string.sing_up_error_invalid_email);
+            displayDialog(this, R.string.sign_up_error_title, R.string.sign_up_error_invalid_email);
         } else if (!password.equals(passwordConfirm)) {
-            displayDialog(this, R.string.sing_up_error_title, R.string.sing_up_error_passwd_diff);
+            displayDialog(this, R.string.sign_up_error_title, R.string.sign_up_error_passwd_diff);
         } else if (password.length() < 6) {
-            displayDialog(this, R.string.sing_up_error_title, R.string.sing_up_error_passwd_diff);
+            displayDialog(this, R.string.sign_up_error_title, R.string.sign_up_error_passwd_diff);
         } else {
             // Initialize Firebase Auth
             FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -140,8 +141,13 @@ public class SignUp_nightcubs extends AppCompatActivity implements GestureDetect
     // Unused methods below, removed for simplicity
     @Override
     public void onShowPress(MotionEvent e) {}
+
     @Override
-    public boolean onSingleTapUp(MotionEvent e) { return true; }
+    public boolean onSingleTapUp(@NonNull MotionEvent e) {
+        return false;
+    }
+
+
     @Override
     public void onLongPress(MotionEvent e) {}
     @Override

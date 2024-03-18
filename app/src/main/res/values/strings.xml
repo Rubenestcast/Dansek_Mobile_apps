@@ -9,9 +9,9 @@
     <string name="login_error_empty_email">Empty email!</string>
     <string name="login_error_empty_passwd">Empty password!</string>
     <string name="signUp_main_button">SignUp</string>
-    <string name="sing_up_error_title">Wrong SignUp</string>
-    <string name="sing_up_error_invalid_email">Invalid email!</string>
-    <string name="sing_up_error_passwd_diff">different passwords!</string>
+    <string name="sign_up_error_title">Wrong SignUp</string>
+    <string name="sign_up_error_invalid_email">Invalid email!</string>
+    <string name="sign_up_error_passwd_diff">different passwords!</string>
     <string name="hint_Email_LogIn">Email</string>
     <string name="hint_direccion_facturacion_LogIn">Dirección facturacion</string>
     <string name="hint_Password_LogIn">Password</string>

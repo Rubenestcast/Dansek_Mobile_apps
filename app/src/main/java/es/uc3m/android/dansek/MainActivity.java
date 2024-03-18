@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,17 +23,14 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        View nightclub_acces = findViewById(R.id.nightclub_acces);
-        nightclub_acces.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Iniciar la actividad MainActivity
-                Intent intent = new Intent(MainActivity.this, Login_nightclubs.class);
-                startActivity(intent);
-                // Cerrar la actividad actual
-                finish();
-            }
+        View nightclub_access = findViewById(R.id.nightclub_access);
+        nightclub_access.setOnClickListener(view -> {
+            Intent intent = new Intent(getBaseContext(), Login_nightclubs.class);
+            Toast.makeText(getApplicationContext(), "Entra", Toast.LENGTH_SHORT).show();
+
+            startActivity(intent);
         });
+
     }
 
 }
