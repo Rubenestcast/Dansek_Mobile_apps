@@ -1,46 +1,44 @@
 package es.uc3m.android.dansek;
 
-import androidx.appcompat.app.AppCompatActivity;
+import static es.uc3m.android.dansek.Login.displayDialog;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import android.view.View;
-import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-import static es.uc3m.android.dansek.Login.displayDialog;
-
-public class SignUp extends AppCompatActivity implements GestureDetector.OnGestureListener {
+public class SignUp_nightcubs extends AppCompatActivity implements GestureDetector.OnGestureListener {
 
     private GestureDetector gestureDetector;
-    private TextView signUpButton_drag;
+    private TextView signUpButton_drag_nightclubs;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sign_up_layout);
+        setContentView(R.layout.sign_nightclubs_up_layout);
 
-        signUpButton_drag = findViewById(R.id.smallRectangle);
-        TextView sign_upButton = findViewById(R.id.signUpButton);
+        signUpButton_drag_nightclubs = findViewById(R.id.smallRectangle_nightclubs);
+        TextView sign_upButton = findViewById(R.id.signUpButton_nightclubs);
         this.gestureDetector = new GestureDetector(this, this);
 
 
-        sign_upButton.setOnClickListener(this::signUp);
+        findViewById(R.id.signUpButton_nightclubs).setOnClickListener(this::signUp_nightclubs);
 
-        TextView backButton = findViewById(R.id.back_button_signup);
+        TextView backButton = findViewById(R.id.back_button_signup_nightclubs);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Iniciar la actividad MainActivity
-                Intent intent = new Intent(SignUp.this, MainActivity.class);
+                Intent intent = new Intent(SignUp_nightcubs.this, MainActivity.class);
                 startActivity(intent);
                 // Cerrar la actividad actual
                 finish();
@@ -49,13 +47,15 @@ public class SignUp extends AppCompatActivity implements GestureDetector.OnGestu
 
     }
 
-    private void signUp(View view) {
+    private void signUp_nightclubs(View view) {
 
-        EditText userEmail = findViewById(R.id.email_edit_text);
-        EditText userPassword = findViewById(R.id.password_edit_text);
-        EditText userPasswordConfirm = findViewById(R.id.password_edit_text2);
+        EditText userEmail = findViewById(R.id.email_edit_text_nightclubs);
+        EditText nightclubDirection = findViewById(R.id.direcion_facturacion_edit_text);
+        EditText userPassword = findViewById(R.id.password_edit_text_nightclubs);
+        EditText userPasswordConfirm = findViewById(R.id.password_edit_text2_nightclubs);
 
         String email = userEmail.getText().toString();
+        String direccion_facturación = nightclubDirection.getText().toString();
         String password = userPassword.getText().toString();
         String passwordConfirm = userPasswordConfirm.getText().toString();
 
@@ -117,17 +117,17 @@ public class SignUp extends AppCompatActivity implements GestureDetector.OnGestu
     }
     private void performTransition() {
         // Obtener las dimensiones del padre (frameLayout)
-        int parentWidth = findViewById(R.id.frameLayout).getWidth();
+        int parentWidth = findViewById(R.id.frameLayout_nightclubs).getWidth();
 
         // Calcular la distancia de desplazamiento (considerando los bordes redondeados)
         int displacement = (parentWidth) - (4 * getResources().getDimensionPixelSize(R.dimen.general_corner_25dp));
 
         // Implementar el efecto de transición (por ejemplo, animar el botón)
-        signUpButton_drag.animate().translationXBy(-displacement).setDuration(100).start();
+        signUpButton_drag_nightclubs.animate().translationXBy(-displacement).setDuration(100).start();
 
         // Iniciar LoginActivity después de un breve retraso
-        signUpButton_drag.postDelayed(() -> {
-            Intent intent = new Intent(SignUp.this, Login.class);
+        signUpButton_drag_nightclubs.postDelayed(() -> {
+            Intent intent = new Intent(SignUp_nightcubs.this, Login_nightclubs.class);
             startActivity(intent);
             finish();
         }, 50); // El retraso debe coincidir con la duración de la animación

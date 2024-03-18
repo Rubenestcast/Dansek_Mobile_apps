@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUp">
+    tools:context=".SignUp_nightcubs">
 
 
     <!-- Imagen de fondo -->
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <View
-        android:id="@+id/color_overlay"
+        android:id="@+id/color_overlay_nightclubs"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#050040"
@@ -35,7 +35,7 @@
     <!-- Cuadro central -->
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView_nightclubs"
         android:layout_width="202dp"
         android:layout_height="195dp"
         android:layout_marginTop="1dp"
@@ -54,7 +54,7 @@
 " />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/central_box"
+        android:id="@+id/central_box_nightclubs"
         android:layout_width="300dp"
         android:layout_height="400dp"
         android:background="@drawable/rectangle_light_turquesa_25dp"
@@ -78,14 +78,14 @@
 
 
             <TextView
-                android:id="@+id/welcome_text"
+                android:id="@+id/welcome_text_nightclubs"
                 android:layout_width="256dp"
-                android:layout_height="45dp"
+                android:layout_height="50dp"
                 android:fontFamily="@font/nunito_black"
-                android:text="@string/logIn_intro"
+                android:text="@string/logIn_nightclubs_intro"
                 android:textAlignment="center"
                 android:textColor="@android:color/white"
-                android:textSize="16sp"
+                android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -96,7 +96,7 @@
 
 
             <FrameLayout
-                android:id="@+id/frameLayout"
+                android:id="@+id/frameLayout_nightclubs"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:background="@drawable/rectangle_light_bg_25dp"
@@ -108,7 +108,7 @@
 
                 <!-- Recuadro pequeño -->
                 <TextView
-                    android:id="@+id/smallRectangle"
+                    android:id="@+id/smallRectangle_nightclubs"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="100dp"
@@ -124,10 +124,10 @@
             </FrameLayout>
 
             <EditText
-                android:id="@+id/email_edit_text"
+                android:id="@+id/email_edit_text_nightclubs"
                 android:layout_width="222dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="36dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginBottom="20dp"
                 android:backgroundTint= "@android:color/white"
                 android:fontFamily="@font/nunito_extrabold"
@@ -135,31 +135,49 @@
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
                 android:textSize="12sp"
-                app:layout_constraintBottom_toTopOf="@+id/password_edit_text"
+                app:layout_constraintBottom_toTopOf="@+id/direcion_facturacion_edit_text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+                app:layout_constraintTop_toBottomOf="@+id/frameLayout_nightclubs"
                 app:layout_constraintVertical_bias="0.693" />
 
             <EditText
-                android:id="@+id/password_edit_text"
+                android:id="@+id/direcion_facturacion_edit_text"
                 android:layout_width="222dp"
-                android:layout_height="48dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint= "@android:color/white"
+                android:fontFamily="@font/nunito_extrabold"
+                android:hint="@string/hint_direccion_facturacion_LogIn"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/password_edit_text_nightclubs"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_edit_text_nightclubs"
+                app:layout_constraintVertical_bias="0.693" />
+
+            <EditText
+                android:id="@+id/password_edit_text_nightclubs"
+                android:layout_width="222dp"
+                android:layout_height="40dp"
                 android:layout_marginBottom="20dp"
                 android:backgroundTint="@android:color/white"
                 android:fontFamily="@font/nunito_extrabold"
                 android:hint="@string/hint_Password_LogIn"
                 android:textColorHint="@android:color/white"
                 android:textSize="12sp"
-                app:layout_constraintBottom_toTopOf="@+id/password_edit_text2"
+                app:layout_constraintBottom_toTopOf="@+id/password_edit_text2_nightclubs"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
-                android:id="@+id/password_edit_text2"
+                android:id="@+id/password_edit_text2_nightclubs"
                 android:layout_width="222dp"
-                android:layout_height="48dp"
-                android:layout_marginBottom="36dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="16dp"
                 android:backgroundTint="@android:color/white"
                 android:fontFamily="@font/nunito_extrabold"
                 android:hint="@string/hint_repeat_Password_SignUp"
@@ -175,7 +193,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/signUpButton"
+        android:id="@+id/signUpButton_nightclubs"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:background="@drawable/rectangle_light_blue_20dp"
@@ -190,21 +208,21 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@id/central_box"
+        app:layout_constraintTop_toBottomOf="@id/central_box_nightclubs"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         android:layout_marginTop="10dp" />
 
     <TextView
-        android:id="@+id/back_button_signup"
+        android:id="@+id/back_button_signup_nightclubs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
         android:fontFamily="@font/nunito_black"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/signUpButton"
-        app:layout_constraintStart_toStartOf="@id/signUpButton"
-        app:layout_constraintEnd_toEndOf="@id/signUpButton" />
+        app:layout_constraintTop_toBottomOf="@id/signUpButton_nightclubs"
+        app:layout_constraintStart_toStartOf="@id/signUpButton_nightclubs"
+        app:layout_constraintEnd_toEndOf="@id/signUpButton_nightclubs" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

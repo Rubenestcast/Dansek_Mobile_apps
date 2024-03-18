@@ -21,5 +21,18 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getBaseContext(), Login.class);
             startActivity(intent);
         });
+
+        View nightclub_acces = findViewById(R.id.nightclub_acces);
+        nightclub_acces.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Iniciar la actividad MainActivity
+                Intent intent = new Intent(MainActivity.this, Login_nightclubs.class);
+                startActivity(intent);
+                // Cerrar la actividad actual
+                finish();
+            }
+        });
     }
+
 }
