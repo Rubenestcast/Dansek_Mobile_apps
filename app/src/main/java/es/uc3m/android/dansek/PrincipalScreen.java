@@ -49,7 +49,7 @@ public class PrincipalScreen extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int screenWidth = displayMetrics.widthPixels;
 
-        float menuWidthFloat = (float) screenWidth;
+        float menuWidthFloat = (float) screenWidth/1.5f;
         int menuWidth = (int) menuWidthFloat;
 
 
@@ -70,7 +70,7 @@ public class PrincipalScreen extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int screenWidth = displayMetrics.widthPixels;
 
-        float menuWidthFloat = (float) screenWidth;
+        float menuWidthFloat = (float) screenWidth/1.5f;
         int menuWidth = (int) menuWidthFloat;
 
 
@@ -79,6 +79,6 @@ public class PrincipalScreen extends AppCompatActivity {
         PopupWindow popupWindow = new PopupWindow(popupView, menuWidth, height, true);
 
         // Mostrar el PopupWindow en la posición deseada (izquierda de la pantalla)
-        popupWindow.showAtLocation(view, Gravity.START, 0, 0);
+        popupWindow.showAtLocation(view, Gravity.END, 0, 0);
     }
 }
