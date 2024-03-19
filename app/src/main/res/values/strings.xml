@@ -50,6 +50,6 @@
     <string name="privacy">  Privacy </string>
     <string name="notifications">  Notifications </string>
     <string name="configuration">  Configuration </string>
-    <string name="terms_cond">  Terms & Conditons </string>
+    <string name="terms_cond">  Terms and Conditons </string>
     <string name="help">  Help </string>
 </resources>

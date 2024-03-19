@@ -51,6 +51,6 @@
     <string name="privacy">  Privacidad </string>
     <string name="notifications">  Notificaciones </string>
     <string name="configuration">  Configuración </string>
-    <string name="terms_cond">  Términos & Condiciones </string>
+    <string name="terms_cond">  Términos y Condiciones </string>
     <string name="help">  Ayuda </string>
 </resources>
