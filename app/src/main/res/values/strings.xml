@@ -47,4 +47,9 @@
     <string name="points_user">  Your points: ... </string>
     <string name="information_user">  Your information </string>
     <string name="edit_profile">  Edit profile </string>
+    <string name="privacy">  Privacy </string>
+    <string name="notifications">  Notifications </string>
+    <string name="configuration">  Configuration </string>
+    <string name="terms_cond">  Terms & Conditons </string>
+    <string name="help">  Help </string>
 </resources>

@@ -48,4 +48,9 @@
     <string name="points_user">  Tus puntos: ... </string>
     <string name="information_user">  Tú información </string>
     <string name="edit_profile">  Editar perfil </string>
+    <string name="privacy">  Privacidad </string>
+    <string name="notifications">  Notificaciones </string>
+    <string name="configuration">  Configuración </string>
+    <string name="terms_cond">  Términos & Condiciones </string>
+    <string name="help">  Ayuda </string>
 </resources>
