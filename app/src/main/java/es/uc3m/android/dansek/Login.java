@@ -39,6 +39,8 @@ public class Login extends AppCompatActivity implements GestureDetector.OnGestur
 
         String checkbox = preferences.getString("remember", "");
         mAuth = FirebaseAuth.getInstance();
+
+        // REFERENCIA
         if (checkbox.equals("true")){
             if (mAuth.getCurrentUser() != null){ // If there's an user already authenticated
                 Intent intent = new Intent(Login.this, PrincipalScreen.class);
