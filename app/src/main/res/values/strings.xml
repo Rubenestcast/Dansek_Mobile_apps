@@ -41,4 +41,6 @@
     <string name="Map_question">Are you ready for the best experience of your life?</string>
     <string name="sixam_in">6 AM in Madrid... </string>
     <string name="AQUIVAELMAPA">AQUI VA EL MAPA</string>
+    <string name="remember_me">remember me</string>
+    <string name="LogOut">Log Out</string>
 </resources>

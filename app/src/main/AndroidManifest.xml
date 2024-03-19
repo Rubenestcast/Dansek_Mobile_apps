@@ -16,6 +16,12 @@
             android:name=".PrincipalScreen"
             android:exported="false" />
         <activity
+            android:name=".Menu"
+            android:exported="false" />
+        <activity
+            android:name=".Map_menu"
+            android:exported="false" />
+        <activity
             android:name=".SignUp"
             android:exported="false"
             android:label="@string/title_activity_sign_up"
@@ -25,6 +31,7 @@
             android:name=".Login"
             android:exported="false"
             android:windowLayoutInDisplayCutoutMode="shortEdges" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -138,6 +138,7 @@
                 android:backgroundTint="@android:color/white"
                 android:fontFamily="@font/nunito_extrabold"
                 android:hint="@string/hint_Password_LogIn"
+                android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -146,6 +147,23 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/email_edit_text"
                 app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/rememberMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/remember_me"
+                android:backgroundTint="@android:color/white"
+                android:fontFamily="@font/nunito_extrabold"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password_edit_text"
+                app:layout_constraintVertical_bias="0.0" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

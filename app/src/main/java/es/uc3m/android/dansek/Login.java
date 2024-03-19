@@ -5,14 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
-import android.widget.TextView;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
-
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -20,6 +22,9 @@ public class Login extends AppCompatActivity implements GestureDetector.OnGestur
 
     private GestureDetector gestureDetector;
     private TextView login_button_drag;
+    private EditText userEmail, userPassword;
+    private CheckBox remember_me;
+    private FirebaseAuth mAuth;
 
 
     @Override
@@ -27,16 +32,53 @@ public class Login extends AppCompatActivity implements GestureDetector.OnGestur
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
 
-        login_button_drag  = findViewById(R.id.smallRectangle);
+        login_button_drag = findViewById(R.id.smallRectangle);
         TextView login_button = findViewById(R.id.loginButton);
-        this.gestureDetector = new GestureDetector(this,this);
+
+        SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+
+        String checkbox = preferences.getString("remember", "");
+        mAuth = FirebaseAuth.getInstance();
+        if (checkbox.equals("true")){
+            if (mAuth.getCurrentUser() != null){ // If there's an user already authenticated
+                Intent intent = new Intent(Login.this, PrincipalScreen.class);
+                startActivity(intent);
+            }else if (mAuth.getCurrentUser() == null){ // The box is marked but no user is authenticated
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("remember", "false");
+                editor.apply();
+                Toast.makeText(Login.this, "Please Sign In", Toast.LENGTH_SHORT).show();
+            }
+
+
+        }else if (checkbox.equals("false")){
+            if (mAuth.getCurrentUser() != null){ // If there's an user already authenticated
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("remember", "true");
+                editor.apply();
+                Intent intent = new Intent(Login.this, PrincipalScreen.class);
+                startActivity(intent);
+            }else if (mAuth.getCurrentUser() == null){ // The box is not marked and no user is authenticated
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("remember", "false");
+                editor.apply();
+                Toast.makeText(Login.this, "Please Sign In", Toast.LENGTH_SHORT).show();
+            }
+        }
+        remember_me = findViewById(R.id.rememberMe);
+
+        this.gestureDetector = new GestureDetector(this, this);
+
+        // Obtener referencias a los campos de texto de correo electrónico y contraseña
+        userEmail = findViewById(R.id.email_edit_text);
+        userPassword = findViewById(R.id.password_edit_text);
 
         login_button.setOnClickListener(this::login);
 
         TextView backButton = findViewById(R.id.back_button_login);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 // Iniciar la actividad MainActivity
                 Intent intent = new Intent(Login.this, MainActivity.class);
                 startActivity(intent);
@@ -45,7 +87,29 @@ public class Login extends AppCompatActivity implements GestureDetector.OnGestur
             }
         });
 
+        remember_me.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (compoundButton.isChecked()){
+                    SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE); // The MODE_PRIVATE let's only our app to read the preferences
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("remember", "true");
+                    editor.apply();
+                    Toast.makeText(Login.this, "Checked", Toast.LENGTH_SHORT).show();
+                } else if (!compoundButton.isChecked()){
+                    SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE); // The MODE_PRIVATE let's only our app to read the preferences
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("remember", "false");
+                    editor.apply();
+                    Toast.makeText(Login.this, "UnChecked", Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
+
+
     }
+
     private void login(View view) {
         EditText userEmail = findViewById(R.id.email_edit_text);
         EditText userPassword = findViewById(R.id.password_edit_text);
@@ -77,7 +141,7 @@ public class Login extends AppCompatActivity implements GestureDetector.OnGestur
     }
 
 
-    
+
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -118,25 +182,6 @@ public class Login extends AppCompatActivity implements GestureDetector.OnGestur
             finish();
         }, 50); // El retraso debe coincidir con la duración de la animación
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

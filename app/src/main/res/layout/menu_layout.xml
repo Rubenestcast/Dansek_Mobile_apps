@@ -10,7 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.90"
-        android:background="@color/background_dark_blue" />
+        android:background="@color/background_dark_blue"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="60dp" />
 
     <TextView
         android:id="@+id/Home"
@@ -32,11 +34,13 @@
         tools:ignore="MissingConstraints,RtlSymmetry"
         tools:layout_editor_absoluteX="15dp" />
 
+
     <TextView
         android:id="@+id/Profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="3dp"
         android:drawablePadding="8dp"
         android:fontFamily="@font/nunito_extrabold"
         android:gravity="center"
@@ -48,16 +52,16 @@
         app:drawableStartCompat="@drawable/baseline_profile_30"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/Home"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.218"
+        app:layout_constraintTop_toBottomOf="@+id/Home"
+        app:layout_constraintVertical_bias="0.02"
         tools:ignore="RtlSymmetry" />
-
 
     <TextView
         android:id="@+id/Points"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="3dp"
         android:drawablePadding="8dp"
         android:fontFamily="@font/nunito_extrabold"
         android:gravity="center"
@@ -69,8 +73,8 @@
         app:drawableStartCompat="@drawable/baseline_coins_30"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/Profile"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308"
+        app:layout_constraintTop_toBottomOf="@+id/Profile"
+        app:layout_constraintVertical_bias="0.02"
         tools:ignore="RtlSymmetry" />
 
     <TextView
@@ -89,8 +93,8 @@
         app:drawableStartCompat="@drawable/baseline_tickets_30"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/Points"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintTop_toBottomOf="@+id/Points"
+        app:layout_constraintVertical_bias="0.02"
         tools:ignore="RtlSymmetry" />
 
     <TextView
@@ -110,10 +114,31 @@
         app:drawableStartCompat="@drawable/baseline_settings_30"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/Tickets"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.482"
+        app:layout_constraintTop_toBottomOf="@+id/Tickets"
+        app:layout_constraintVertical_bias="0.02"
         tools:ignore="RtlSymmetry" />
 
+    <Button
+        android:id="@+id/LogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:text="@string/LogOut"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="24sp"
+
+        app:drawableStartCompat="@drawable/logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Settings"
+        app:layout_constraintTop_toBottomOf="@+id/Settings"
+        app:layout_constraintVertical_bias="0.2"
+        tools:ignore="RtlSymmetry" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

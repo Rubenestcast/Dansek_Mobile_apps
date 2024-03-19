@@ -42,4 +42,6 @@
     <string name="Map_question">¿Preparado para la mejor experiencia de tu vida?</string>
     <string name="sixam_in">6 AM en Madrid... </string>
     <string name="AQUIVAELMAPA">AQUI VA EL MAPA</string>
+    <string name="remember_me">recuérdame</string>
+    <string name="LogOut">Salir</string>
 </resources>
