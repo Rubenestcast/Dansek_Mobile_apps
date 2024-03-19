@@ -44,4 +44,8 @@
     <string name="AQUIVAELMAPA">AQUI VA EL MAPA</string>
     <string name="remember_me">recuérdame</string>
     <string name="LogOut">Salir</string>
+    <string name="user_id">  Usuario: user_name</string>
+    <string name="points_user">  Tus puntos: ... </string>
+    <string name="information_user">  Tú información </string>
+    <string name="edit_profile">  Editar perfil </string>
 </resources>

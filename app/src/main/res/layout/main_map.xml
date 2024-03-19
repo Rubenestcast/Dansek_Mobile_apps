@@ -18,16 +18,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Vista para aplicar el filtro de color -->
-    <View
-        android:id="@+id/color_overlay"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#050040"
-        android:alpha="0.58"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -83,7 +73,8 @@
         android:textAlignment="gravity"
         android:textColor="@color/white"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="46dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="121dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -194,18 +185,21 @@
             app:layout_constraintStart_toEndOf="@+id/AM_6"
             app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextView"
             app:layout_constraintVertical_bias="0.0" />
+
         <TextView
             android:id="@+id/sixam_in"
-            android:layout_width="275dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="336dp"
             android:fontFamily="@font/nunito_black"
-            android:singleLine="false"
             android:text="@string/sixam_in"
             android:textAlignment="gravity"
             android:textColor="@color/letras_azul_turq_oscuro"
             android:textSize="20sp"
-            tools:layout_editor_absoluteX="38dp"
-            tools:layout_editor_absoluteY="130dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.133"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/OpenMap"
@@ -225,6 +219,14 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.875"
             tools:ignore="MissingConstraints,RtlSymmetry" />
+
+        <View
+            android:id="@+id/color_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.58"
+            android:background="#050040"
+            tools:layout_editor_absoluteX="3dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
