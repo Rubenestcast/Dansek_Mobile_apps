@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group>
+        <item
+            android:id="@+id/menu_home"
+            android:title="@string/Menu_Home"
+            android:icon="@drawable/baseline_home_30"
+            />
+        <item
+            android:id="@+id/menu_profile"
+            android:title="@string/Menu_Profile"
+            android:icon="@drawable/baseline_profile_30"/>
+        <item
+            android:id="@+id/menu_points"
+            android:title="@string/Menu_Points"
+            android:icon="@drawable/baseline_coins_30"/>
+        <item
+            android:id="@+id/menu_tickets"
+            android:title="@string/Menu_Tickets"
+            android:icon="@drawable/baseline_tickets_30"/>
+        <item
+            android:id="@+id/menu_settings"
+            android:title="@string/Settings"
+            android:icon="@drawable/baseline_settings_30"/>
+    </group>
+    <item
+        android:id="@+id/logout"
+        android:title="@string/LogOut"
+        android:icon="@drawable/logout"/>
+</menu>

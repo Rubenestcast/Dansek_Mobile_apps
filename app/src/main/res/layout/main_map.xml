@@ -221,7 +221,13 @@
             app:layout_constraintVertical_bias="0.875"
             tools:ignore="MissingConstraints,RtlSymmetry" />
 
-
+        <View
+            android:id="@+id/color_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.58"
+            android:background="#050040"
+            tools:layout_editor_absoluteX="3dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

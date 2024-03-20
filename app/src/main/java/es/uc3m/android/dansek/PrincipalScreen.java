@@ -1,112 +1,145 @@
+
+
 package es.uc3m.android.dansek;
 
+
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupWindow;
+import android.widget.Toast;
+import android.widget.Toolbar;
 
-public class PrincipalScreen extends AppCompatActivity implements LogoutListener {
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
-    private PopupWindow currentPopupMenu;
-    private PopupWindow currentMapMenu;
+import java.util.Objects;
 
+public class PrincipalScreen extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    private androidx.drawerlayout.widget.DrawerLayout drawer;
+    private ActionBarDrawerToggle toogle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.principal_screen_layout);
+        setContentView(R.layout.menu_popup);
 
         // Obtener la referencia al TextView del menú (burguerMenu)
-        View burguerMenu = findViewById(R.id.burguerMenu);
+
         View mapMenu = findViewById(R.id.mapMenu);
+        View Menu = findViewById(R.id.burguerMenu);
 
-        // Configurar el OnClickListener para el burguerMenu
-        burguerMenu.setOnClickListener(new View.OnClickListener() {
+        androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar_main);
+        setSupportActionBar(toolbar);
+
+        drawer = findViewById(R.id.drawer_layout);
+        toogle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toogle);
+
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        // Configurar el clic del icono del menú
+        Menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Mostrar el menú emergente cuando se hace clic en el burguerMenu
-                showPopupMenu(v);
-            }
-        });
-        mapMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Mostrar el menú emergente cuando se hace clic en el burguerMenu
-                showPopupMapMenu(v);
+                if (drawer.isDrawerOpen(GravityCompat.START)) {
+                    drawer.closeDrawer(GravityCompat.START);
+                } else {
+                    drawer.openDrawer(GravityCompat.START);
+                }
             }
         });
     }
-
-    // Método para mostrar el menú emergente
-    private void showPopupMenu(View view) {
-        // Inflar el layout del menú emergente
-        View popupView = LayoutInflater.from(this).inflate(R.layout.menu_layout, null);
-
-        // Obtener el ancho de la pantalla
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        int screenWidth = displayMetrics.widthPixels;
-
-        float menuWidthFloat = (float) screenWidth / 1.5f;
-        int menuWidth = (int) menuWidthFloat;
-
-        // Crear el PopupWindow con el ancho calculado
-        int height = ViewGroup.LayoutParams.MATCH_PARENT;
-        PopupWindow popupWindow = new PopupWindow(popupView, menuWidth, height, true);
-
-        // Mostrar el PopupWindow en la posición deseada (izquierda de la pantalla)
-        popupWindow.showAtLocation(view, Gravity.START, 0, 0);
-
-        currentPopupMenu = popupWindow;
-    }
-
-    private void showPopupMapMenu(View view) {
-        // Inflar el layout del menú emergente
-        View popupView = LayoutInflater.from(this).inflate(R.layout.map_layout, null);
-
-        // Obtener el ancho de la pantalla
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        int screenWidth = displayMetrics.widthPixels;
-
-        float menuWidthFloat = (float) screenWidth / 1.5f;
-        int menuWidth = (int) menuWidthFloat;
-
-        // Crear el PopupWindow con el ancho calculado
-        int height = ViewGroup.LayoutParams.MATCH_PARENT;
-        PopupWindow popupWindow = new PopupWindow(popupView, menuWidth, height, true);
-
-        // Mostrar el PopupWindow en la posición deseada (izquierda de la pantalla)
-        popupWindow.showAtLocation(view, Gravity.END, 0, 0);
-
-        currentMapMenu = popupWindow;
-    }
-
-    // Método para cerrar todos los PopupWindow abiertos
-    public void closePopupMenus() {
-        // Cerrar el PopupWindow del menú si está abierto
-        if (currentPopupMenu != null && currentPopupMenu.isShowing()) {
-            currentPopupMenu.dismiss();
-            currentPopupMenu = null; // Actualizar la referencia a null después de cerrar
-        }
-
-        // Cerrar el PopupWindow del mapa si está abierto
-        if (currentMapMenu != null && currentMapMenu.isShowing()) {
-            currentMapMenu.dismiss();
-            currentMapMenu = null; // Actualizar la referencia a null después de cerrar
-        }
-    }
-
-    // Método para el logout
     @Override
-    public void onLogout() {
-        // Redirigir al usuario a la actividad de inicio de sesión
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish(); // Finalizar la actividad actual
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Obtener el ID del elemento del menú seleccionado
+        int id = item.getItemId();
+
+        // Verificar el ID del elemento del menú seleccionado y mostrar el Toast correspondiente
+        if (id == R.id.menu_home) {
+            Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.menu_profile) {
+            Toast.makeText(this, "Open My Profile", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, Profile.class);
+            startActivity(intent);
+        } else if (id == R.id.menu_points) {
+            Toast.makeText(this, "Open My Points", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, Points.class);
+            startActivity(intent);
+        }else if (id == R.id.menu_tickets) {
+            Toast.makeText(this, "Open my tickets", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, Tickets.class);
+            startActivity(intent);
+        }else if (id == R.id.menu_settings) {
+            Toast.makeText(this, "Open Settings", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, Settings.class);
+            startActivity(intent);
+        }else if (id == R.id.logout) {
+            Toast.makeText(this, "Logging out", Toast.LENGTH_SHORT).show();
+            onLogout();
+        }
+
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
+
+    @Override
+    public void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        toogle.syncState();
+    }
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig){
+        super.onConfigurationChanged(newConfig);
+        toogle.onConfigurationChanged(newConfig);
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (toogle.onOptionsItemSelected(item)){
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void onLogout() {
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        if (mAuth.getCurrentUser() != null){
+            mAuth.signOut();
+            // Redirigir al usuario a la actividad de inicio de sesión
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish(); // Finalizar la actividad actual
+        }
+
+    }
+
+
+
+
+
 }
+
+

@@ -6,6 +6,15 @@
         <item name="windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
         </style>
+    <style name="MenuItemTextStyle">
+        <item name="android:fontFamily">@font/nunito_extrabold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+
+    </style>
+
 
     <style name="Theme.Dansek" parent="Base.Theme.Dansek" />
 </resources>

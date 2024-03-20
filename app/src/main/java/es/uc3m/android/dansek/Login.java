@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+
 public class Login extends AppCompatActivity implements GestureDetector.OnGestureListener {
 
     private GestureDetector gestureDetector;
@@ -54,18 +55,12 @@ public class Login extends AppCompatActivity implements GestureDetector.OnGestur
 
 
         }else if (checkbox.equals("false")){
-            if (mAuth.getCurrentUser() != null){ // If there's an user already authenticated
-                SharedPreferences.Editor editor = preferences.edit();
-                editor.putString("remember", "true");
-                editor.apply();
-                Intent intent = new Intent(Login.this, PrincipalScreen.class);
-                startActivity(intent);
-            }else if (mAuth.getCurrentUser() == null){ // The box is not marked and no user is authenticated
+                mAuth.signOut();
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("remember", "false");
                 editor.apply();
                 Toast.makeText(Login.this, "Please Sign In", Toast.LENGTH_SHORT).show();
-            }
+
         }
         remember_me = findViewById(R.id.rememberMe);
 
