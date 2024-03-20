@@ -68,6 +68,13 @@ public class PrincipalScreen extends AppCompatActivity implements NavigationView
                 }
             }
         });
+        mapMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PrincipalScreen.this, Map_main.class);
+                startActivity(intent);
+            }
+        });
     }
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -83,16 +90,16 @@ public class PrincipalScreen extends AppCompatActivity implements NavigationView
             startActivity(intent);
         } else if (id == R.id.menu_points) {
             Toast.makeText(this, "Open My Points", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, Points.class);
-            startActivity(intent);
+            Intent intent2 = new Intent(PrincipalScreen.this, Points.class);
+            startActivity(intent2);
         }else if (id == R.id.menu_tickets) {
             Toast.makeText(this, "Open my tickets", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, Tickets.class);
-            startActivity(intent);
+            Intent intent3 = new Intent(PrincipalScreen.this, Tickets.class);
+            startActivity(intent3);
         }else if (id == R.id.menu_settings) {
             Toast.makeText(this, "Open Settings", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, Settings.class);
-            startActivity(intent);
+            Intent intent4 = new Intent(PrincipalScreen.this, Settings.class);
+            startActivity(intent4);
         }else if (id == R.id.logout) {
             Toast.makeText(this, "Logging out", Toast.LENGTH_SHORT).show();
             onLogout();

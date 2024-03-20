@@ -94,7 +94,7 @@
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:background="@drawable/rectangle_light_turquesa_20dp"
-            android:drawableStart="@drawable/search_lupa"
+            android:drawableStart="@drawable/baseline_search_lupa"
             android:drawablePadding="8dp"
             android:fontFamily="@font/nunito_extrabold"
             android:hint="@string/Search_bar"
@@ -126,7 +126,7 @@
             android:stateListAnimator="@null"
             android:text="@string/Tardeo"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#FFFFFF"
+            android:textColor="@android:color/white"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/AM_6"
@@ -150,7 +150,7 @@
             android:text="@string/AM_6"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#FFFFFF"
+            android:textColor="@android:color/white"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -176,7 +176,7 @@
             android:stateListAnimator="@null"
             android:text="@string/Techno"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#FFFFFF"
+            android:textColor="@android:color/white"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -184,6 +184,26 @@
             app:layout_constraintStart_toEndOf="@+id/AM_6"
             app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextView"
             app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/OpenMap"
+            android:layout_width="317dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rectangle_red20dp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:gravity="center"
+            android:text="AQUÍ VAN LOS EVENTOS"
+            android:textColor="@color/blue_letter"
+            android:textColorHint="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.888"
+            tools:ignore="MissingConstraints,RtlSymmetry" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

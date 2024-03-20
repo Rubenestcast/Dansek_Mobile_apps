@@ -78,7 +78,7 @@
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:background="@drawable/rectangle_light_turquesa_20dp"
-            android:drawableStart="@drawable/search_lupa"
+            android:drawableStart="@drawable/baseline_search_lupa"
             android:drawablePadding="8dp"
             android:fontFamily="@font/nunito_extrabold"
             android:hint="@string/Add_event_bar"

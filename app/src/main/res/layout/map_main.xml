@@ -38,7 +38,7 @@
         app:layout_constraintVertical_bias="0.00" />
 
     <TextView
-        android:id="@+id/burguerMenu_nightclubs"
+        android:id="@+id/BACK"
         android:layout_width="35dp"
         android:layout_height="35dp"
 
@@ -48,40 +48,12 @@
         app:layout_constraintStart_toStartOf="@+id/background_image"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.04000002"
-        app:drawableStartCompat="@drawable/baseline_menu_30" />
-
-    <TextView
-        android:id="@+id/mapMenu"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-
-        app:drawableStartCompat="@drawable/baseline_map_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/background_image"
-        app:layout_constraintHorizontal_bias="0.957"
-        app:layout_constraintStart_toStartOf="@+id/background_image"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04" />
-
-    <TextView
-        android:id="@+id/welcome_text"
-        android:layout_width="311dp"
-        android:layout_height="69dp"
-        android:fontFamily="@font/nunito_black"
-        android:singleLine="false"
-        android:text="@string/Map_question"
-        android:textAlignment="gravity"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/principalRectangle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:drawableStartCompat="@drawable/baseline_arrow_back" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/principalRectangle"
         android:layout_width="350dp"
-        android:layout_height="500dp"
+        android:layout_height="600dp"
         android:background="@drawable/rectangle_light_bg_25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,7 +68,7 @@
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:background="@drawable/rectangle_light_turquesa_20dp"
-            android:drawableStart="@drawable/search_lupa"
+            android:drawableStart="@drawable/baseline_search_lupa"
             android:drawablePadding="8dp"
             android:fontFamily="@font/nunito_extrabold"
             android:hint="@string/Search_bar"
@@ -108,7 +80,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.057"
+            app:layout_constraintVertical_bias="0.045"
             tools:ignore="RtlSymmetry" />
 
         <Button
@@ -128,7 +100,7 @@
             android:stateListAnimator="@null"
             android:text="@string/Tardeo"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#FFFFFF"
+            android:textColor="@android:color/white"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/AM_6"
@@ -152,14 +124,14 @@
             android:text="@string/AM_6"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#FFFFFF"
+            android:textColor="@android:color/white"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextView"
-            app:layout_constraintVertical_bias="0.03" />
+            app:layout_constraintVertical_bias="0.024" />
 
         <Button
             android:id="@+id/Techno"
@@ -178,7 +150,7 @@
             android:stateListAnimator="@null"
             android:text="@string/Techno"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#FFFFFF"
+            android:textColor="@android:color/white"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -188,10 +160,172 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
+            android:id="@+id/Selectyourcity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rectangle_light_turquesa_25dp"
+
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:text="@string/Selectyourcity"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+
+            app:drawableEndCompat="@drawable/baseline_flecha_abajo_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.115"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.228"
+            tools:ignore="MissingConstraints,RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/Selectyourzone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rectangle_light_turquesa_25dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:text="@string/Selectyourzone"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:drawableEndCompat="@drawable/baseline_flecha_abajo_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.228"
+            tools:ignore="MissingConstraints,RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/Taxi_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="380dp"
+            android:background="@drawable/rectangle_light_grey_25dp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:gravity="center"
+            android:textColor="@color/blue_letter"
+            android:textColorHint="@android:color/white"
+            android:textSize="24sp"
+            app:drawableEndCompat="@drawable/baseline_taxi_solid"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Uber_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.1"
+            tools:ignore="MissingConstraints,RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/Taxi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:gravity="center"
+            android:text="@string/Taxi"
+            android:textAlignment="center"
+            android:textColor="@color/blue_letter"
+            android:textColorHint="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/Taxi_image"
+            app:layout_constraintStart_toStartOf="@+id/Taxi_image"
+            app:layout_constraintEnd_toEndOf="@+id/Taxi_image"
+            tools:ignore="MissingConstraints,RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/Uber_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="380dp"
+            android:background="@drawable/rectangle_light_grey_25dp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:gravity="center"
+            android:textColor="@color/blue_letter"
+            android:textColorHint="@android:color/white"
+            android:textSize="24sp"
+            app:drawableEndCompat="@drawable/baseline_car_solid"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+
+            tools:ignore="MissingConstraints,RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/Uber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:gravity="center"
+            android:text="@string/Uber"
+            android:textColor="@color/blue_letter"
+            android:textColorHint="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/Uber_image"
+            app:layout_constraintStart_toStartOf="@+id/Uber_image"
+            app:layout_constraintEnd_toEndOf="@+id/Uber_image"
+            tools:ignore="MissingConstraints,RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/Hospital_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rectangle_light_grey_25dp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:gravity="center"
+            android:textColor="@color/blue_letter"
+            android:textColorHint="@android:color/white"
+            android:textSize="24sp"
+            app:drawableEndCompat="@drawable/baseline_hospital_solid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Uber_image"
+            tools:ignore="MissingConstraints,RtlSymmetry"
+            tools:layout_editor_absoluteY="176dp" />
+
+        <TextView
+            android:id="@+id/Hospital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:gravity="center"
+            android:text="@string/Hospital"
+            android:textColor="@color/blue_letter"
+            android:textColorHint="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/Hospital_image"
+            app:layout_constraintStart_toStartOf="@+id/Hospital_image"
+            app:layout_constraintEnd_toEndOf="@+id/Hospital_image"
+            tools:ignore="MissingConstraints,RtlSymmetry" />
+
+        <TextView
             android:id="@+id/sixam_in"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="336dp"
+            android:layout_marginBottom="320dp"
             android:fontFamily="@font/nunito_black"
             android:text="@string/sixam_in"
             android:textAlignment="gravity"
@@ -204,13 +338,13 @@
 
         <TextView
             android:id="@+id/OpenMap"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="317dp"
+            android:layout_height="298dp"
             android:layout_gravity="center"
             android:background="@drawable/rectangle_red20dp"
             android:fontFamily="@font/nunito_extrabold"
-            android:text="@string/AQUIVAELMAPA"
             android:gravity="center"
+            android:text="@string/AQUIVAELMAPA"
             android:textColor="@color/blue_letter"
             android:textColorHint="@android:color/white"
             android:textSize="24sp"
@@ -218,16 +352,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.875"
+            app:layout_constraintVertical_bias="0.946"
             tools:ignore="MissingConstraints,RtlSymmetry" />
-
-        <View
-            android:id="@+id/color_overlay"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:alpha="0.58"
-            android:background="#050040"
-            tools:layout_editor_absoluteX="3dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
