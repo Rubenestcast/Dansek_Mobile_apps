@@ -13,7 +13,7 @@
         android:alpha="0.90"
         android:background="@color/background_dark_blue"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteY="-16dp" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -25,12 +25,24 @@
         android:foreground="?android:attr/selectableItemBackground"
         android:scaleType="centerCrop"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Notifications"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/BACK"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+
+        android:layout_marginStart="16dp"
+        app:drawableStartCompat="@drawable/baseline_arrow_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
 
     <TextView
         android:id="@+id/Notifications"

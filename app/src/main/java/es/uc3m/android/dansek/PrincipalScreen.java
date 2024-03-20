@@ -11,6 +11,8 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -102,7 +104,7 @@ public class PrincipalScreen extends AppCompatActivity implements NavigationView
             startActivity(intent4);
         }else if (id == R.id.logout) {
             Toast.makeText(this, "Logging out", Toast.LENGTH_SHORT).show();
-            onLogout();
+            onLogout(PrincipalScreen.this);
         }
 
         drawer.closeDrawer(GravityCompat.START);
@@ -131,16 +133,18 @@ public class PrincipalScreen extends AppCompatActivity implements NavigationView
         return super.onOptionsItemSelected(item);
     }
 
-    public void onLogout() {
+    public static void onLogout(Context context) {
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         if (mAuth.getCurrentUser() != null){
             mAuth.signOut();
             // Redirigir al usuario a la actividad de inicio de sesión
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-            finish(); // Finalizar la actividad actual
+            Intent intent = new Intent(context, MainActivity.class);
+            context.startActivity(intent);
+            // Si context es una actividad, llama a finish
+            if (context instanceof Activity) {
+                ((Activity) context).finish();
+            }
         }
-
     }
 
 

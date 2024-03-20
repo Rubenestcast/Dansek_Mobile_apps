@@ -12,19 +12,30 @@
         android:layout_height="match_parent"
         android:alpha="0.90"
         android:background="@color/background_dark_blue"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="28dp" />
 
+    <TextView
+        android:id="@+id/BACK"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+
+        android:layout_marginStart="16dp"
+        app:drawableStartCompat="@drawable/baseline_arrow_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
 
     <TextView
         android:id="@+id/user_image"
-        android:layout_width="33dp"
-        android:layout_height="58dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="28dp"
         android:gravity="center"
         android:textColor="@color/blue_letter"
-        app:drawableEndCompat="@drawable/baseline_profile_30"
+        app:drawableEndCompat="@drawable/baseline_user_red"
         app:layout_constraintBottom_toTopOf="@+id/edit_profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +69,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="20dp"
         android:background="@drawable/rectangle_dark_turquesa_20dp"
-        android:drawablePadding="4dp"
+        android:drawablePadding="8dp"
         android:fontFamily="@font/nunito_extrabold"
         android:gravity="center"
         android:paddingStart="50dp"
@@ -82,7 +93,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="264dp"
         android:background="@drawable/rectangle_dark_turquesa_20dp"
-        android:drawablePadding="4dp"
+        android:drawablePadding="8dp"
         android:fontFamily="@font/nunito_extrabold"
         android:gravity="center"
         android:paddingStart="50dp"
@@ -104,7 +115,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="48dp"
         android:background="@drawable/rectangle_dark_turquesa_20dp"
-        android:drawablePadding="4dp"
+        android:drawablePadding="8dp"
         android:fontFamily="@font/nunito_extrabold"
         android:gravity="center"
         android:paddingStart="50dp"

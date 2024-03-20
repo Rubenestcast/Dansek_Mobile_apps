@@ -17,6 +17,18 @@
         tools:layout_editor_absoluteY="53dp" />
 
     <TextView
+        android:id="@+id/BACK"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+
+        android:layout_marginStart="16dp"
+        app:drawableStartCompat="@drawable/baseline_arrow_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
         android:id="@+id/My_Points"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,15 +65,7 @@
         tools:layout_editor_absoluteY="236dp"
         tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/left_arrow_tickets"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="44dp"
-        android:src="@drawable/baseline_arrow_back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

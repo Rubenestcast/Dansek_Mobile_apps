@@ -53,4 +53,6 @@
     <string name="configuration">  Configuración </string>
     <string name="terms_cond">  Términos y Condiciones </string>
     <string name="help">  Ayuda </string>
+    <string name="navigation_drawer_open">abrir nav var</string>
+    <string name="navigation_drawer_close">cerrar nav var</string>
 </resources>
