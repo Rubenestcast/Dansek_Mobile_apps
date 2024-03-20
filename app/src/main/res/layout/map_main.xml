@@ -291,6 +291,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginBottom="380dp"
             android:background="@drawable/rectangle_light_grey_25dp"
             android:fontFamily="@font/nunito_extrabold"
             android:gravity="center"
@@ -298,11 +299,11 @@
             android:textColorHint="@android:color/white"
             android:textSize="24sp"
             app:drawableEndCompat="@drawable/baseline_hospital_solid"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.471"
             app:layout_constraintStart_toEndOf="@+id/Uber_image"
-            tools:ignore="MissingConstraints,RtlSymmetry"
-            tools:layout_editor_absoluteY="176dp" />
+            tools:ignore="MissingConstraints,RtlSymmetry" />
 
         <TextView
             android:id="@+id/Hospital"

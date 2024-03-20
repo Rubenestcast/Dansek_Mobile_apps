@@ -24,10 +24,7 @@
             android:title="@string/Settings"
             android:icon="@drawable/baseline_settings_30"/>
     </group>
-    <item
-        android:id="@+id/Map"
-        android:title="@string/LogOut"
-        android:icon="@drawable/baseline_map_24"/>
+
     <item
         android:id="@+id/logout"
         android:title="@string/LogOut"
