@@ -2,8 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".Map_main">
 
     <!-- Imagen de fondo -->
     <ImageView
@@ -225,8 +227,8 @@
             app:drawableEndCompat="@drawable/baseline_taxi_solid"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/Uber_image"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintVertical_bias="0.1"
             tools:ignore="MissingConstraints,RtlSymmetry" />
 
@@ -243,9 +245,9 @@
             android:textColor="@color/blue_letter"
             android:textColorHint="@android:color/white"
             android:textSize="18sp"
-            app:layout_constraintTop_toBottomOf="@+id/Taxi_image"
-            app:layout_constraintStart_toStartOf="@+id/Taxi_image"
             app:layout_constraintEnd_toEndOf="@+id/Taxi_image"
+            app:layout_constraintStart_toStartOf="@+id/Taxi_image"
+            app:layout_constraintTop_toBottomOf="@+id/Taxi_image"
             tools:ignore="MissingConstraints,RtlSymmetry" />
 
         <TextView
@@ -280,9 +282,9 @@
             android:textColor="@color/blue_letter"
             android:textColorHint="@android:color/white"
             android:textSize="18sp"
-            app:layout_constraintTop_toBottomOf="@+id/Uber_image"
-            app:layout_constraintStart_toStartOf="@+id/Uber_image"
             app:layout_constraintEnd_toEndOf="@+id/Uber_image"
+            app:layout_constraintStart_toStartOf="@+id/Uber_image"
+            app:layout_constraintTop_toBottomOf="@+id/Uber_image"
             tools:ignore="MissingConstraints,RtlSymmetry" />
 
         <TextView
@@ -316,9 +318,9 @@
             android:textColor="@color/blue_letter"
             android:textColorHint="@android:color/white"
             android:textSize="18sp"
-            app:layout_constraintTop_toBottomOf="@+id/Hospital_image"
-            app:layout_constraintStart_toStartOf="@+id/Hospital_image"
             app:layout_constraintEnd_toEndOf="@+id/Hospital_image"
+            app:layout_constraintStart_toStartOf="@+id/Hospital_image"
+            app:layout_constraintTop_toBottomOf="@+id/Hospital_image"
             tools:ignore="MissingConstraints,RtlSymmetry" />
 
         <TextView
@@ -336,15 +338,17 @@
             app:layout_constraintHorizontal_bias="0.133"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/OpenMap"
-            android:layout_width="317dp"
-            android:layout_height="298dp"
+        <EditText
+            android:id="@+id/txtlatitud"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="6dp"
             android:background="@drawable/rectangle_red20dp"
             android:fontFamily="@font/nunito_extrabold"
             android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:text="@string/AQUIVAELMAPA"
             android:textColor="@color/blue_letter"
             android:textColorHint="@android:color/white"
@@ -355,6 +359,58 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/sixam_in"
             app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints,RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/txtlongitud"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/rectangle_red20dp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:gravity="center"
+            android:text="@string/AQUIVAELMAPA"
+            android:textColor="@color/blue_letter"
+            android:textColorHint="@android:color/white"
+            android:textSize="24sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtlatitud"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints,RtlSymmetry" />
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+
+            android:layout_marginTop="6dp"
+            android:background="@drawable/rectangle_red20dp"
+
+            android:fontFamily="@font/nunito_extrabold"
+            android:gravity="center"
+            android:text="@string/AQUIVAELMAPA"
+            android:textColor="@color/blue_letter"
+            android:textColorHint="@android:color/white"
+            android:textSize="24sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtlongitud"
+            app:layout_constraintVertical_bias="0.0"
+            map:cameraZoom="10"
+            map:uiRotateGestures="true"
+            map:uiZoomControls="true"
             tools:ignore="MissingConstraints,RtlSymmetry" />
 
 

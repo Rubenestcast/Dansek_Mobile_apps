@@ -70,6 +70,7 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore")
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.android.gms:play-services-pay:16.1.0")
+    implementation("com.google.android.gms:play-services-maps:18.1.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
     testImplementation("junit:junit:4.13.2")
