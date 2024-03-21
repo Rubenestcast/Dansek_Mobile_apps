@@ -35,6 +35,16 @@ public class Profile extends AppCompatActivity {
             }
         });
 
+        TextView back_button= findViewById(R.id.BACK);
+
+        back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Profile.this, PrincipalScreen.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
