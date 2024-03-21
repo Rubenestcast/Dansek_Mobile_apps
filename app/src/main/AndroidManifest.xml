@@ -24,7 +24,7 @@
         <activity
             android:name=".Points"
             android:exported="false"
-            android:label="@string/title_activity_points"
+            android:label="@string/title_of_my_points_"
             android:theme="@style/Theme.Dansek" />
         <activity
             android:name=".Profile"
