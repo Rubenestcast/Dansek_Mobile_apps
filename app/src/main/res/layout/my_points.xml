@@ -5,16 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
-    tools:context=".Login">
+    tools:context=".Points">
 
-    <View
-        android:id="@+id/color_overlay"
+    <!-- Imagen de fondo -->
+    <ImageView
+        android:id="@+id/background_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.90"
-        android:background="#DD01CC"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="53dp" />
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo_de_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/BACK"
@@ -28,42 +33,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022" />
 
+    <!-- Rectángulo para el ticket de eventos -->
     <TextView
-        android:id="@+id/My_Points"
-        android:layout_width="wrap_content"
+        android:id="@+id/points"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:drawablePadding="8dp"
-        android:fontFamily="@font/nunito_extrabold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rectangle_light_my_events"
+        android:text="Your points"
+        android:textColor="@android:color/black"
         android:gravity="center"
-        android:paddingStart="15dp"
-        android:text="@string/title_of_my_points_"
-        android:textColor="@android:color/white"
-        android:textColorHint="@android:color/white"
-        android:textSize="24sp"
-        tools:ignore="MissingConstraints,RtlSymmetry"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="169dp" />
-
-    <Button
-        android:id="@+id/Puntos_Persona"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:background="@drawable/rectangle_light_blue_20dp"
-        android:fontFamily="@font/nunito_extrabold"
-        android:gravity="center|center_horizontal|center_vertical"
-        android:paddingStart="8dp"
-        android:paddingTop="8dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="8dp"
-        android:stateListAnimator="@null"
-        android:text="@string/Points_of_each"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="236dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 
