@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="latcity1" translatable="false">40.4168</string>
+    <string name="latcity2" translatable="false">41.3851</string>
+    <string name="latcity3" translatable="false">39.4699</string>
+    <string name="latcity4" translatable="false">43.2630</string>
+    <string name="latcity5" translatable="false">36.7213</string>
+    <string name="latcity6" translatable="false">37.3886</string>
+
+    <string name="longcity1" translatable="false">-3.7038</string>
+    <string name="longcity2" translatable="false">2.1734</string>
+    <string name="longcity3" translatable="false">-0.3763</string>
+    <string name="longcity4" translatable="false">-2.9370</string>
+    <string name="longcity5" translatable="false">-4.4214</string>
+    <string name="longcity6" translatable="false">-5.9826</string>
+
+</resources>

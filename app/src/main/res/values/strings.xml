@@ -12,6 +12,7 @@
     <string name="sign_up_error_title">Wrong SignUp</string>
     <string name="sign_up_error_invalid_email">Invalid email!</string>
     <string name="sign_up_error_passwd_diff">different passwords!</string>
+    <string name="sign_up_error_passwd_length">too short password!</string>
     <string name="hint_Email_LogIn">Email</string>
     <string name="hint_direccion_facturacion_LogIn">Dirección facturacion</string>
     <string name="hint_Password_LogIn">Password</string>
@@ -54,4 +55,5 @@
     <string name="help">  Help </string>
     <string name="navigation_drawer_open">open nav bar</string>
     <string name="navigation_drawer_close">close nav var\n</string>
+
 </resources>

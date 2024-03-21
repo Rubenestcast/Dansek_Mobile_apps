@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/city1_group">
+        <item
+            android:id="@+id/city1_district1"
+            android:title="@string/city1_district1" />
+        <item
+            android:id="@+id/city1_district2"
+            android:title="@string/city1_district2" />
+        <item
+            android:id="@+id/city1_district3"
+            android:title="@string/city1_district3" />
+        <item
+            android:id="@+id/city1_district4"
+            android:title="@string/city1_district4" />
+    </group>
+
+    <group android:id="@+id/city2_group">
+        <item
+            android:id="@+id/city2_district1"
+            android:title="@string/city2_district1" />
+        <item
+            android:id="@+id/city2_district2"
+            android:title="@string/city2_district2" />
+        <item
+            android:id="@+id/city2_district3"
+            android:title="@string/city2_district3" />
+    </group>
+
+    <group android:id="@+id/city3_group">
+        <item
+            android:id="@+id/city3_district1"
+            android:title="@string/city3_district1" />
+        <item
+            android:id="@+id/city3_district2"
+            android:title="@string/city3_district2" />
+        <item
+            android:id="@+id/city3_district3"
+            android:title="@string/city3_district3" />
+    </group>
+
+    <group android:id="@+id/city4_group">
+        <item
+            android:id="@+id/city4_district1"
+            android:title="@string/city4_district1" />
+        <item
+            android:id="@+id/city4_district2"
+            android:title="@string/city4_district2" />
+        <item
+            android:id="@+id/city4_district3"
+            android:title="@string/city4_district3" />
+    </group>
+
+    <group android:id="@+id/city5_group">
+        <item
+            android:id="@+id/city5_district1"
+            android:title="@string/city5_district1" />
+        <item
+            android:id="@+id/city5_district2"
+            android:title="@string/city5_district2" />
+        <item
+            android:id="@+id/city5_district3"
+            android:title="@string/city5_district3" />
+    </group>
+
+    <group android:id="@+id/city6_group">
+        <item
+            android:id="@+id/city6_district1"
+            android:title="@string/city6_district1" />
+        <item
+            android:id="@+id/city6_district2"
+            android:title="@string/city6_district2" />
+        <item
+            android:id="@+id/city6_district3"
+            android:title="@string/city6_district3" />
+    </group>
+
+</menu>

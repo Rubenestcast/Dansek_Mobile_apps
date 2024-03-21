@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group>
+        <item
+            android:id="@+id/city1"
+            android:title="@string/city1"
+            />
+        <item
+            android:id="@+id/city2"
+            android:title="@string/city2"
+            />
+        <item
+            android:id="@+id/city3"
+            android:title="@string/city3"
+            />
+        <item
+            android:id="@+id/city4"
+            android:title="@string/city4"
+            />
+
+        <item
+            android:id="@+id/city5"
+            android:title="@string/city5"
+            />
+        <item
+            android:id="@+id/city6"
+            android:title="@string/city6"
+            />
+
+    </group>
+</menu>

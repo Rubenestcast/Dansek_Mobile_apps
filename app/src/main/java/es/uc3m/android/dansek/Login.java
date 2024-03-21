@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 
 public class Login extends AppCompatActivity implements GestureDetector.OnGestureListener {
@@ -27,6 +28,8 @@ public class Login extends AppCompatActivity implements GestureDetector.OnGestur
     private CheckBox remember_me;
     private FirebaseAuth mAuth;
 
+    private FirebaseFirestore db;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,8 @@ public class Login extends AppCompatActivity implements GestureDetector.OnGestur
 
         login_button_drag = findViewById(R.id.smallRectangle);
         TextView login_button = findViewById(R.id.loginButton);
+
+        db = FirebaseFirestore.getInstance();
 
         SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
 

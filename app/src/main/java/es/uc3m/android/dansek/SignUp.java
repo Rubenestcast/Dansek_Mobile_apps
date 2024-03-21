@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.widget.EditText;
@@ -15,8 +16,15 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Transaction;
 
 import static es.uc3m.android.dansek.Login.displayDialog;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class SignUp extends AppCompatActivity implements GestureDetector.OnGestureListener {
@@ -24,7 +32,7 @@ public class SignUp extends AppCompatActivity implements GestureDetector.OnGestu
     private GestureDetector gestureDetector;
     private TextView signUpButton_drag;
 
-
+    private FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +43,7 @@ public class SignUp extends AppCompatActivity implements GestureDetector.OnGestu
         TextView sign_upButton = findViewById(R.id.signUpButton);
         this.gestureDetector = new GestureDetector(this, this);
 
+        db = FirebaseFirestore.getInstance();
 
         sign_upButton.setOnClickListener(this::signUp);
 
@@ -48,7 +57,6 @@ public class SignUp extends AppCompatActivity implements GestureDetector.OnGestu
     }
 
     private void signUp(View view) {
-
         EditText userEmail = findViewById(R.id.email_edit_text);
         EditText userPassword = findViewById(R.id.password_edit_text);
         EditText userPasswordConfirm = findViewById(R.id.password_edit_text2);
@@ -62,19 +70,36 @@ public class SignUp extends AppCompatActivity implements GestureDetector.OnGestu
         } else if (!password.equals(passwordConfirm)) {
             displayDialog(this, R.string.sign_up_error_title, R.string.sign_up_error_passwd_diff);
         } else if (password.length() < 6) {
-            displayDialog(this, R.string.sign_up_error_title, R.string.sign_up_error_passwd_diff);
+            displayDialog(this, R.string.sign_up_error_title, R.string.sign_up_error_passwd_length);
         } else {
-            // Initialize Firebase Auth
-            FirebaseAuth mAuth = FirebaseAuth.getInstance();
+            try {
+                // La colección no existe, crea el documento con la ID específica
+                Map<String, Object> user = new HashMap<>();
+                user.put("name", email);
 
-            // Create user
-            mAuth.createUserWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(this, new MyCompleteListener(this, mAuth));
+                // Agrega el documento a la colección "users" utilizando el método set()
+                db.collection("users").document(email).set(user)
+                        .addOnSuccessListener(aVoid -> {
+                            // Documento agregado exitosamente
+                            Log.d("MainActivity", "Documento agregado exitosamente con ID: " + email);
+                        })
+                        .addOnFailureListener(e -> {
+                            // Error al agregar el documento
+                            Log.e("MainActivity", "Error al agregar el documento", e);
+                        });
+                // Initialize Firebase Auth
+                FirebaseAuth mAuth = FirebaseAuth.getInstance();
+
+                // Create user
+                mAuth.createUserWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(this, new MyCompleteListener(this, mAuth));
 
 
+            } catch (Exception e) {
+                e.printStackTrace();
+                Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
         }
-
-
     }
 
 

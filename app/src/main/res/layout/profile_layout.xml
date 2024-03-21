@@ -74,7 +74,6 @@
         android:gravity="center"
         android:paddingStart="50dp"
         android:paddingEnd="50dp"
-        android:text="@string/user_id"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
         android:textSize="24sp"

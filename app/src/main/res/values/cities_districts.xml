@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="city1" translatable="false">madrid</string>
+    <string name="city1_district1" translatable="false">Centro</string>
+    <string name="city1_district2" translatable="false">Malasaña</string>
+    <string name="city1_district3" translatable="false">Chueca</string>
+    <string name="city1_district4" translatable="false">La Latina</string>
+
+    <string name="city2" translatable="false">barcelona</string>
+    <string name="city2_district1" translatable="false">El Raval</string>
+    <string name="city2_district2" translatable="false">Gràcia</string>
+    <string name="city2_district3" translatable="false">El Born</string>
+
+    <string name="city3" translatable="false">valencia</string>
+    <string name="city3_district1" translatable="false">El Carmen</string>
+    <string name="city3_district2" translatable="false">Ruzafa</string>
+    <string name="city3_district3" translatable="false">El Cabanyal</string>
+
+    <string name="city4" translatable="false">bilbao</string>
+    <string name="city4_district1" translatable="false">Indautxu</string>
+    <string name="city4_district2" translatable="false">Casco Viejo</string>
+    <string name="city4_district3" translatable="false">Begona</string>
+
+    <string name="city5" translatable="false">malaga</string>
+    <string name="city5_district1" translatable="false">Muelle Uno</string>
+    <string name="city5_district2" translatable="false">Soho</string>
+    <string name="city5_district3" translatable="false">Centro Histórico</string>
+
+    <string name="city6" translatable="false">sevilla</string>
+    <string name="city6_district1" translatable="false">Triana</string>
+    <string name="city6_district2" translatable="false">Santa Cruz</string>
+    <string name="city6_district3" translatable="false">El Arenal</string>
+
+</resources>
